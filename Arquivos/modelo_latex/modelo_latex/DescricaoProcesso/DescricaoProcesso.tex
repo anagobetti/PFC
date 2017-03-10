@@ -1,22 +1,70 @@
-\chapter{Descrição do Processo}
 
-Se desejar, uma visão geral do Capítulo pode ser colocada antes da primeira Seção. Este é o capítulo de descrição do processo e formulação do problema. Tendo em vista que se trata de uma monografia de engenharia de controle e automação, em muitos casos, é fundamental a apresentação dos sensores e atuadores do processo.
+\chapter{Revisão Bibliográfica}
+
+Neste capitulo serão abordados todos os conhecimentos necessários para o desenvolvimento do projeto, como as características da Carteira Nacional de Habilitação, as bibliotecas e linguagens utilizadas para o desenvolvimento e principais algoritmos utilizados na implementação.
 
 
-\section{Processo de Fazer Alguma Coisa}
+\section{Carteira Nacional de Habilitação}
 \markright{\thesection ~~~ Histórico}
 \label{hist}
 
-...
+
+A CNH, Carteira Nacional de Habilitação, que também é conhecida como carteira de motorista é um documento de identificação obrigatório para qualquer cidadão que pretenda conduzir um veiculo automotor.  Atualmente o código brasileiro divide a CNH em cinco categorias de acordo com o tipo de veículos que o condutor está habilitado a conduzir, sendo elas (DETRAN PR):
 
 
-\section{Instrumentação do Processo}
+\begin{description}
+	\item[A:] condutor de veículo motorizado de duas ou três rodas, com ou sem carro lateral (motos);
+	\item[B:] condutor de veículo motorizado não abrangido pela categoria A, com peso bruto total inferior a 3.
+	\item[C:]  condutor de veículo motorizado usado para transporte de carga, com peso bruto superior a 3.500 quilos (como caminhões);	
+	\item[D:]   condutor de veículo motorizado usado no transporte de passageiros, com lotação superior a oito lugares além do motorista (ônibus e vans, por exemplo);
+	\item[E:] condutor de combinação de veículos em que a unidade conduzida se enquadre nas categorias B, C ou D e cuja unidade acoplada ou rebocada tenha peso bruto de 6 mil quilos ou mais; ou cuja lotação seja superior a oito lugares; ou, ainda, que seja enquadrado na categoria trailer
+\end{description}
+
+  
+A primeira CNH só pode ser retirada nas categorias A ou B e ela deve participar de cursos teóricos preparatórios, médico e psicotécnico. Após a primeira habilitação existem algumas regras para mudança de categoria (DETRAN MG):
+
+\begin{itemize}
+	\item Categoria B: ter mais de 18 anos completos;
+	\item Categoria C: ter, no mínimo, um ano na categoria ''B'';
+	\item Categoria D: ter 21 anos completos, estar habilidade no mínimo a 2 anos na categoria B ou 1 ano na categoria ''C'';
+	\item Categoria E: ter 21 anos completos, estar habilitado, há um ano nas categorias ''C'' ou ''D'';
+\end{itemize}
+
+
+Atualmente a CNH possui, além dos dados acerca da habilitação, fotografia, numero da carteira de identidade (RG) e do Cadastro de Pessoa Física. Assim a CNH pode ser utilizada como um documento de identificação pessoal em todo território nacional. Segundo a reportagem divulgada na folha, é crescente o número de pessoas que falsificam este documento para se passar por outras pessoas, mudar identidade ou menores que desejam modificar a idade para entrar em festas.
+Para prevenir fraudes 'o Detran investe continuamente em tecnologias, para proporcionar maior segurança aos usuários e parceiros nos processos dentro e fora da intuição', como afirma o diretor geral do órgão, Marcos Traad. Dessa forma, a CNH possui diversos mecanismos e marcas de segurança para evitar qualquer tipo de fraude, como pode ser visto na figura X. 
+
+\begin{figure}[hp]
+	\centering
+		\includegraphics{../../cnh2006.jpg}
+	\label{fig:cnh2006}
+\end{figure}
+
+
+O grande problema é que as falsificações estão cada vez mais próximas da CNH original, dificultando a identificação da fraude a olho nú, ou seja, o documento não passaria em uma pericia mais profunda, onde seriam analisados a  fluorescência do papel, contrastes da marca d'água, entre outros fatos. Porém, ao ser analisada sem estes equipamentos o documento passaria em uma blitz por exemplo. 
+
+
+
+\section{Ambiente de Desenvolvimento}
 \markright{\thesection ~~~ O Telefone}
 \label{telefone}
 
+Uma linguagem de programação é uma linguagem artificial projetada para comunicar instruções a uma máquina, especialmente um computador. Linguagens de programação podem ser utilizadas para criar os programas que controlam o comportamento de uma máquina (AABY, 2004).
+
+A descrição de uma linguagem de programação é geralmente dividida em dois componentes da sintaxe (forma) e semântica (significado). Alguns idiomas são definidos por um documento de especificação, como por exemplo, a linguagem de programação C é especificada por um padrão ISO. (ISO/IEC, 2011).
 
 
-Continua ...
+\subsection{Linguagem C\#}
+\markright{\thesection ~~~ O Telefone}
+\label{telefone}
+
+C\# é uma linguagem de programação orientada a objeto desenvolvida pela Microsoft em meados de 1999 com base na linguagem C++ que permite criar uma grande variedade de aplicativos seguros e robustos que são executados no .NET Framework. A intenção da Microsoft foi criar uma linguagem de uso geral simples, robusta, orientada objetos e fortemente tipada. É possível usar C# para criar aplicativos cliente do Windows, Web Services, aplicativos cliente-servidor, entre outros. 
+
+
+\subsection{Biblioteca EmguCV}
+\markright{\thesection ~~~ O Telefone}
+\label{telefone}
+
 
 
 \section{Resumo do Capítulo}

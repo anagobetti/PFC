@@ -36,7 +36,7 @@ namespace AnaliseCNH
             try
             {
                 string path = "Imagens/1200.jpg";
-                imgOriginal = new Mat(path, LoadImageType.AnyColor);
+                imgOriginal = new Mat(path, LoadImageType.Grayscale);
             }
             catch (Exception ex)
             {
