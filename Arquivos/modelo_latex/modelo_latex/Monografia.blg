@@ -1,14 +1,6 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: Monografia.aux
-A level-1 auxiliary file: Capa/capa.aux
-A level-1 auxiliary file: Resumo/Resumo.aux
-A level-1 auxiliary file: Agradecimentos/Agradecimentos.aux
-A level-1 auxiliary file: TabelaConteudo/TabelaConteudo.aux
-A level-1 auxiliary file: ListaFiguras/ListaFiguras.aux
-A level-1 auxiliary file: ListaTabelas/ListaTabelas.aux
-A level-1 auxiliary file: Introducao/Introducao.aux
 A level-1 auxiliary file: DescricaoProcesso/DescricaoProcesso.aux
-A level-1 auxiliary file: Metodologia/Metodologia.aux
-A level-1 auxiliary file: Resultados/Resultados.aux
-A level-1 auxiliary file: Conclusao/Conclusao.aux
-The style file: plain.bst
-Database file #1: telefonia.bib
+I found no \citation commands---while reading file Monografia.aux
+I found no \bibdata command---while reading file Monografia.aux
+I found no \bibstyle command---while reading file Monografia.aux
+(There were 3 error messages)

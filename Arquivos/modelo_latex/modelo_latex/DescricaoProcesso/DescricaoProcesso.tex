@@ -31,45 +31,85 @@ A primeira CNH só pode ser retirada nas categorias A ou B e ela deve participar 
 \end{itemize}
 
 
-Atualmente a CNH possui, além dos dados acerca da habilitação, fotografia, numero da carteira de identidade (RG) e do Cadastro de Pessoa Física. Assim a CNH pode ser utilizada como um documento de identificação pessoal em todo território nacional. Segundo a reportagem divulgada na folha, é crescente o número de pessoas que falsificam este documento para se passar por outras pessoas, mudar identidade ou menores que desejam modificar a idade para entrar em festas.
-Para prevenir fraudes 'o Detran investe continuamente em tecnologias, para proporcionar maior segurança aos usuários e parceiros nos processos dentro e fora da intuição', como afirma o diretor geral do órgão, Marcos Traad. Dessa forma, a CNH possui diversos mecanismos e marcas de segurança para evitar qualquer tipo de fraude, como pode ser visto na figura X. 
+Atualmente a CNH possui, além dos dados acerca da habilitação, fotografia, número da carteira de identidade (RG) e do Cadastro de Pessoa Física (CPF). Assim a CNH pode ser utilizada como um documento de identificação pessoal em todo território nacional (Art. 159 do CTB). Além disto a CNH tem data de validade, ou seja, motoristas com menos de 65 anos devem renovar a carteira a cada 5 anos, após os 65 anos ou para alguns casos especiais o prazo de renovação é de 3 anos. Dessa forma, garante-se que o documento apresentado é sempre recente.
+  
+De acordo com Marcos Traad é crescente o número de pessoas que falsificam este documento para se passar por outras pessoas, mudar identidade ou mudar dados pessoais como data de nascimento ou mesmo dirigir sem ser devidamente habilitado. Para prevenir fraudes ''o Detran investe continuamente em tecnologias, para proporcionar maior segurança aos usuários e parceiros nos processos dentro e fora da intuição'', como afirma o diretor geral do órgão, Marcos Traad. Dessa forma, a CNH possui diversos mecanismos e marcas de segurança para evitar qualquer tipo de fraude, como pode ser visto na figura X.
 
-\begin{figure}[hp]
+\begin{figure}[h]
 	\centering
-		\includegraphics{../../cnh2006.jpg}
+	\includegraphics[width=0.75\textwidth]{../../cnh2006.jpg}
+	\caption{CNH Caption}
 	\label{fig:cnh2006}
 \end{figure}
 
-
-O grande problema é que as falsificações estão cada vez mais próximas da CNH original, dificultando a identificação da fraude a olho nú, ou seja, o documento não passaria em uma pericia mais profunda, onde seriam analisados a  fluorescência do papel, contrastes da marca d'água, entre outros fatos. Porém, ao ser analisada sem estes equipamentos o documento passaria em uma blitz por exemplo. 
-
+Além disto, a legislação não permite a plastificação do documento, umas vez que como pode ser observado na análise da imagem [] existem pontos na CNH ''em talho doce'', ou seja, impressão em alto relevo que permitem a identificação de fraudes sem uma pericia minuciosa.   
 
 
-\section{Ambiente de Desenvolvimento}
+\section{Imagem Digital}
 \markright{\thesection ~~~ O Telefone}
 \label{telefone}
 
-Uma linguagem de programação é uma linguagem artificial projetada para comunicar instruções a uma máquina, especialmente um computador. Linguagens de programação podem ser utilizadas para criar os programas que controlam o comportamento de uma máquina (AABY, 2004).
+As imagens digitais podem ser produzidas por meio de diversos aparelhos, como câmeras de vídeo, câmeras fotográficas, scanners, aparelhos de raio-X, entre outros. A tecnologia da imagem digital permite a codificação digital documentos analógicos, em forma de imagem digital para armazenagem, transmissão em sistemas computadorizados. 
 
-A descrição de uma linguagem de programação é geralmente dividida em dois componentes da sintaxe (forma) e semântica (significado). Alguns idiomas são definidos por um documento de especificação, como por exemplo, a linguagem de programação C é especificada por um padrão ISO. (ISO/IEC, 2011).
+Uma imagem digital é a representação de uma imagem bidimensional como uma sequencia finita de valores digitais.  Cada um destes valores representa um pixel, que é o menor elemento que compõe uma imagem digital ou uma componente de cor de um pixel, no caso de imagens coloridas. 
+
+O valor de cada pixel é obtido pela quantização do sinal analógico (carga elétrica) obtido pelo dispositivo de captura, citados anteriormente. Os três tipos principais de imagens são:
+
+\begin{itemize}
+	\item Imagens Binárias: Também conhecida como imagens preto e branco. Nestas imagens cada pixel pode assumir valores 0 ou 1. Este tipo de imagem normalmente surge no processamento de uma imagem digital como resultado de uma máscara ou certas operações como segmentação, threshold e ruído (estes conceitos serão discutidos nas próximas sessões).
+	\item Imagens em escala de cinza: Nestas imagens cada pixel é representado por apenas um valor, que pode variar de 0 que indica a cor preta até 255 que indica a cor branca, totalizando 256 tons de cinza diferentes.
+	\item Imagens coloridas: Nestas imagens, cada pixel é representado por pelo menos três informações, uma para cada canal de cor, como por exemplo o RGB que será um dos itens discutidos na próxima sessão. O valor de cada canal e composição da imagem colorida depende do espaço de cores utilizado. 
+\end{itemize}
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=1.00\textwidth]{../../TiposImagem.png}
+	\label{fig:TiposImagem}
+\end{figure}
+
+	
+%\subsection{Resolução e Definição}
+
+%\subsection{Escala de Cor}
+
+\section{Visão Computacional}
+
+A visão computacional é um campo que inclui métodos para a aquisição, processamento, análise e compreensão de imagens. A finalidade dessas análises e processamento é a obtenção de informações numéricas ou simbólicas de imagem, como por exemplo, na forma de decisões (SHAPIRO, 2001). Dessa forma, o objetivo de um sistema de visão computacional é extrair informações úteis a partir de dados de imagem usando modelos construídos com a ajuda da geometria, física, estatística e teoria de aprendizagem. 
+
+O sistema cognitivo do ser humano processa e extrai informações de imagens a todo momento e utilizar de sistemas computacionais para realizar a mesma atividade é algo extremamente complexo e que exige diversos conhecimentos e abstrações. Para isso a organização de cada sistema depende muito da sua aplicação. No entanto existem algumas funções típicas, que são encontradas em muitos sistemas de visão computacional e normalmente são executadas nesta ordem:
+
+\begin{enumerate}
+	\item Aquisição de imagens
+	\item Pré-processamento: para poder processar as imagens computacionalmente elas precisam ser pré-processadas. Uma imagem digital pode possuir muitas informações que não devem ser utilizadas e podem influenciar negativamente na  tomada de decisão do sistema. O pré-processamento permite que estas informações indesejadas sejam ignoradas ou retiradas (ZUECH, 1988). 
+	\item Extração de características: Extração de objetos de interesse e partes da imagem.
+	\item Processamento de alto nível: Nesta etapa a entrada é tipicamente um pequeno conjunto de dados, como um conjunto de pontos ou uma região da imagem que se supõe conter um objeto especifico (DAVIES, 2005). Este processamento permite estimar parâmetros específicos da aplicação, como orientação e tamanho do objeto de interesse, classificação dos objetos, etc. 
+	\item Tomada de decisão
+\end{enumerate}
+
+Nas subseções seguintes serão descritas algumas técnicas e métodos utilizados nesta aplicação. 
+
+\subsection{Conversão para Escala de Cinza}
+	
+Como já foi discutido nas seções anteriores, as imagens digitais possuem diversas representações. A mais comum é a chamada RGB (Red, Green, Blue) e ela produz várias cores através das três cores básicas: vermelha, verde e azul. Nesta representação cada pixel possui três bytes, um para cada cor, que podem possuir valores entre 0 e 255. Para reproduzir a cor preta as três dimensões devem possuir valores iguais a 0. Para obter a cor vermelha basta colocar 255 na componente R do pixel e 0 nas demais componentes. Dessa forma, é possível criar a cor desejada a partir da combinação ponderada de cada um dos componentes. 
+
+Porém algumas operações do  processamento de imagens são facilitados quando os pixels têm apenas uma dimensão, ou seja, quando a imagem está em escala de cinza ou binária. Para converter uma imagem colorida em escala de cinza é feita uma média simples entre os valores de RGB do pixel e esta média é atribuída ao novo valor do mesmo. 
+
+\subsection{Threshold}
+
+A identificação de partes de interesse em uma imagem é uma das etapas  mais criticas no processamento de imagens. A segmentação de uma imagem consistem em dividir a imagem em regiões de interesse, isolando aqueles pixeis que não fazem parte do mesmo. O
+
+O threshold é um valor limite que é usado em um critério de seleção. Todos os pixels de uma imagem são comparados a esse critério e são alterados confome a necessidade. Um exemplo da aplicação de threshold é comparar todos os pixels a um valor limite e caso sejam maiores ou iguais a esse limiar ele é transformado em pretos (valor 0) e transformando em brancos (valor 255), caso contrário. 
 
 
-\subsection{Linguagem C\#}
-\markright{\thesection ~~~ O Telefone}
-\label{telefone}
+\subsection{Smooth}
 
-C\# é uma linguagem de programação orientada a objeto desenvolvida pela Microsoft em meados de 1999 com base na linguagem C++ que permite criar uma grande variedade de aplicativos seguros e robustos que são executados no .NET Framework. A intenção da Microsoft foi criar uma linguagem de uso geral simples, robusta, orientada objetos e fortemente tipada. É possível usar C# para criar aplicativos cliente do Windows, Web Services, aplicativos cliente-servidor, entre outros. 
+A operação de smooth busca suavizar uma imagem eliminando pontos que estejam fora de um padrão esperado. A suavização consiste na aplicação de um filtro passa-baixa para retirada de ruídos. O filtro de média possui uma janela de determinado tamanho que irá percorrer toda a imagem e o elemento central dessa janela receberá a média de todos os elementos da janela. Caso o valor do pixel seja muito diferente do valor médio dos pixeis vizinhos, ele é interpretado como ruído e seu valor é corrigido. 
 
+\section{Sistemas OCR}
 
-\subsection{Biblioteca EmguCV}
-\markright{\thesection ~~~ O Telefone}
-\label{telefone}
+Segundo (Bhaskar, 2010), o algoritmo de reconhecimento óptico de caracteres (Optical Character Recognition \- OCR) é a tradução , eletrônica ou mecânica, de imagens escaneadas de documentos escritos à mão, datilografados em máquinas de escrever ou impressos, para textos codificados em máquinas.  As aplicações dos sistemas OCR são as mais variadas, indo desde o reconhecimento de placas de automóveis ou de outros tipos de placas e avisos, passando pela digitalização de documentos para o formato texto e finalmente reconhecimento de caligrafias manuais. 
 
-
-
-\section{Resumo do Capítulo}
-
-Não termine de forma abrupta.
+Segundo (Mori, 1992) os primeiros avanços destas tecnologias começaram nos anos 50, inicialmente apenas conceitualmente, mas gradualmente avançando para ferramentas mais concretas. As primeiras versões eram bastante sujeitas à falhas e se baseavam em comparação de documentos ou em imagens como modelos. Com o passar do tempo, concluiu-se que a comparação de modelos não era suficiente para obter bons resultados e começaram os estudos para utilização da analise estrutural dos caracteres para identificação dos mesmo. Esta mudança de abordagem deu origem aos sistemas atuais. 
 
 
 
