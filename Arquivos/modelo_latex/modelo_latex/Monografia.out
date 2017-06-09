@@ -1,8 +1,20 @@
-\BOOKMARK [0][-]{chapter.1}{Revis\343o Bibliogr\341fica}{}% 1
-\BOOKMARK [1][-]{section.1.1}{Carteira Nacional de Habilita\347\343o}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{Imagem Digital}{chapter.1}% 3
-\BOOKMARK [1][-]{section.1.3}{Vis\343o Computacional}{chapter.1}% 4
-\BOOKMARK [2][-]{subsection.1.3.1}{Convers\343o para Escala de Cinza}{section.1.3}% 5
-\BOOKMARK [2][-]{subsection.1.3.2}{Threshold}{section.1.3}% 6
-\BOOKMARK [2][-]{subsection.1.3.3}{Smooth}{section.1.3}% 7
-\BOOKMARK [1][-]{section.1.4}{Sistemas OCR}{chapter.1}% 8
+\BOOKMARK [0][-]{chapter.1}{Introdu\347\343o}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Motiva\347\343o e Justificativa}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Objetivos do Projeto}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Organiza\347\343o do Trabalho}{chapter.1}% 4
+\BOOKMARK [0][-]{chapter.2}{Revis\343o Bibliogr\341fica}{}% 5
+\BOOKMARK [1][-]{section.2.1}{Carteira Nacional de Habilita\347\343o}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.2}{Imagem Digital}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.3}{Vis\343o Computacional}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.3.1}{Convers\343o para Escala de Cinza}{section.2.3}% 9
+\BOOKMARK [2][-]{subsection.2.3.2}{Binariza\347\343o}{section.2.3}% 10
+\BOOKMARK [2][-]{subsection.2.3.3}{Segmenta\347\343o baseada em bordas}{section.2.3}% 11
+\BOOKMARK [2][-]{subsection.2.3.4}{Transformada de Hough}{section.2.3}% 12
+\BOOKMARK [1][-]{section.2.4}{Sistemas OCR}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.5}{Resumo do Cap\355tulo}{chapter.2}% 14
+\BOOKMARK [0][-]{chapter.3}{Materiais e M\351todos}{}% 15
+\BOOKMARK [1][-]{section.3.1}{Ambiente de Desenvolvimento}{chapter.3}% 16
+\BOOKMARK [2][-]{subsection.3.1.1}{Linguagem C\043}{section.3.1}% 17
+\BOOKMARK [2][-]{subsection.3.1.2}{Biblioteca OpenCV e EmguCV}{section.3.1}% 18
+\BOOKMARK [2][-]{subsection.3.1.3}{Tesseract}{section.3.1}% 19
+\BOOKMARK [2][-]{subsection.3.1.4}{Microsoft Visual Studio}{section.3.1}% 20
