@@ -6,7 +6,7 @@ O processo cognitivo-visual do ser humano é um assunto extremamente complexo, um
 
 A simulação do processo citado acima por meio de computador caracteriza os sistemas de visão computacional. A visão computacional pode ser definida como o conjunto de métodos e técnicas que tornam os sistemas capazes de extrair e interpretar as informações presentes em uma imagem. Um dos seus maiores objetivos é a busca por um modelo de representação genérico que se aproxime ao processo realizado por um ser humano. 
 
-Outra aplicação destes sistemas surgiu da necessidade do aumento da fiabilidade das informações obtidas. Isto se deve ao fato de que o processo de classificação de imagens pelo homem é muito eficaz, porém é sujeito a falhas que podem ser ocasionadas pelo cansaço, fadiga, dentre outros fatores. Dessa forma, a utilização de visão computacional não substitui o homem em suas tarefas, porém pode auxilia-lo a diminuir erros. 
+Outra aplicação destes sistemas surgiu da necessidade do aumento da fiabilidade das informações obtidas. Isto se deve ao fato de que o processo de classificação de imagens pelo homem é muito eficaz, porém é sujeito a falhas que podem ser ocasionadas pelo cansaço, fadiga, dentre outros fatores. Dessa forma, a utilização de visão computacional não substitui o homem em suas tarefas, porém pode auxiliá-lo a diminuir erros. 
 
 Dessa forma, percebe-se que estes sistemas podem ser utilizados em diversas aplicações nos mais variados domínios, como por exemplo: medicina, automação industrial, automação comercial, sensoriamento remoto, etc. 
 
@@ -15,19 +15,18 @@ Dessa forma, percebe-se que estes sistemas podem ser utilizados em diversas apli
 \markright{\thesection ~~~ Motivação}
 %\label{motiva}
 
-A evolução da tecnologia possibilitou o aumento da velocidade de processamento dos computadores possibilitando a realização de diversas tarefas que não eram possíveis até pouco tempo, gerando capacidade para realização de diversas novas tarefas. Ao mesmo tempo, o avanço da tecnologia fez com que fosse crescente a necessidade de se acessar dados de forma mais rápida e eficiente. Além disso, existe a necessidade de arquivar e gerir grandes quantidades de informação. Nos dias atuais a tendência é a utilização de Sistemas de Informação para armazenar esses dados, facilitando o seu acesso, gestão e utilização. 
+A evolução da tecnologia permitiu o aumento da velocidade de processamento dos computadores, possibilitando a realização de diversas tarefas que não eram possíveis até pouco tempo atrás, gerando capacidade para realização de diversas novas tarefas. Ao mesmo tempo, o avanço da tecnologia fez com que fosse crescente a necessidade de se acessar dados de forma mais rápida e eficiente. Além disso, existe a necessidade de arquivar e gerir grandes quantidades de informação. Nos dias atuais, a tendência é a utilização de Sistemas de Informação para armazenar esses dados, facilitando o seu acesso, gestão e utilização. 
 
-No entanto, algumas informações ainda são armazenadas no formato físico, como é o caso dos documentos pessoais de identificação, que podem ser digitalizados. Este dualismo entre  informação em formato físico e digital dá origem, a que muitas vezes, seja necessário transferir informações do meio físico para o meio digital, como no caso de alguns sistemas pode ser necessário cadastrar um cliente, digitando o seu nome, número do documento, data de nascimento, local de nascimento, entre outras informações. 
+No entanto, algumas informações ainda são armazenadas no formato físico, como é o caso dos documentos pessoais de identificação, que podem ser digitalizados. Este dualismo entre informação em formato físico e digital dá origem, a que muitas vezes, seja necessário transferir informações do meio físico para o meio digital, como em alguns sistemas pode ser necessário cadastrar um cliente, digitando o seu nome, número do documento, data de nascimento, local de nascimento, entre outras informações. 
 
-Porém não existe atualmente uma maneira rápida e automática de realizar esta conversão dos dados, sendo necessário um processo manual de interpretação da informação contida no documento. Este é um processo que, além de cansativo e repetitivo, é um grande consumidor de recursos humanos e está sujeito à falhas.
-Dessa forma, percebe-se que a existência de ferramentas que não só convertam arquivos do formato físico para o formato digital, mas que também leiam e interpretem os dados seria de grande utilidade, uma vez que simplificaria o processo, reduzindo o tempo de espera em diversas atividades, como em nos processos em que é necessário realizar um cadastro pessoal, como ao alugar um quarto de hotel ou alugar um carro ou equipamento.
-
+Porém não existe atualmente uma maneira rápida e automática de realizar esta conversão dos dados, sendo necessário um procedimento manual de interpretação da informação contida no documento. Este é um processo que, além de cansativo e repetitivo, é um grande consumidor de recursos humanos e está sujeito à falhas.
+Dessa forma, percebe-se que a existência de ferramentas que não só convertam arquivos do formato físico para o formato digital, mas que também leiam e interpretem os dados seria de grande utilidade, uma vez que simplificaria o trabalho, reduzindo o tempo de espera em diversas atividades, como em nos casos em que é necessário realizar um cadastro pessoal, como ao alugar um quarto de hotel ou alugar um carro ou equipamento.
 
 \section{Objetivos do Projeto}
 \markright{\thesection ~~~ Objetivos}
 %label{objetivos}
 
-O objetivo deste projeto é desenvolver uma software de visão computacional, com o auxílio da biblioteca OpenCV, capaz de extrair informações de um documento de identificação. 
+O objetivo deste projeto é desenvolver uma software que utilize de conveitos de  visão computacional capaz de extrair informações pessoais de um documento de identificação, no caso a Carteira Nacional de Habilitação (CNH). 
 
 \section{Organização do Trabalho}
 \markright{\thesection ~~~ Organização do Trabalho}
@@ -35,17 +34,13 @@ O objetivo deste projeto é desenvolver uma software de visão computacional, com 
 
 Este trabalho está organizado da seguinte forma:
 
-Introdução: Apresenta os sistemas de visão computacional, bem como suas aplicações, vantagens, aplicações e limitações tecnológicas envolvidas. Além disto também são apresentados os objetivos e a organização do trabalho.
-
-Revisão Bibliográfica: Neste capitulo será apresentado a fundamentação teórica necessária para o completo entendimento do projeto. Serão abordados temas como as principais características de uma carteira de habilitação, visão computacional, processamento de imagens, entre outros.
-
-Materiais e Métodos: Nesta seção serão descritas todos os passos necessários para implementar os sistema de identificação de fraudes nas CNHs. E serão definidas as formas de avaliação do sistema.
-
-Resultados: Serão apresentados os resultados do sistema implementado no capitulo anterior.
-
-Discussão: nessa seção os resultados obtidos são comparados criticamente com o estado da arte e os conhecimentos existentes.
-
-Conclusão: Serão apresentadas a conclusões bem como proposições de trabalhos futuros.
+\begin{itemize}
+	\item Introdução: Apresenta os sistemas de visão computacional, bem como suas aplicações, vantagens e limitações tecnológicas envolvidas. Além disto também são apresentados os objetivos e a organização do trabalho.
+	\item Revisão Bibliográfica: Neste capitulo será apresentada a fundamentação teórica necessária para o completo entendimento do projeto. Serão abordados temas como as principais características de uma carteira de habilitação, visão computacional, processamento de imagens, entre outros.
+	\item Materiais e Métodos: Nesta seção serão descritos todos os passos necessários para implementar os sistema leitura automática da CNH. E serão definidas as formas de avaliação do sistema.
+	\item Resultados: Serão apresentados os resultados do sistema implementado no capítulo anterior.
+	\item Conclusão: Serão apresentadas a conclusões bem como proposições de trabalhos futuros.
+\end{itemize}
 
 
 \clearpage

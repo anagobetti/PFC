@@ -17,8 +17,8 @@ Class=LaTeXView
 Document=DescricaoProcesso\DescricaoProcesso.tex
 
 [Frame0_View0,0]
-TopLine=228
-Cursor=13893
+TopLine=198
+Cursor=11755
 
 [Frame1]
 Flags=0
@@ -72,7 +72,7 @@ Document=Introducao\Introducao.tex
 
 [Frame3_View0,0]
 TopLine=60
-Cursor=4561
+Cursor=4930
 
 [Frame4]
 Flags=0
@@ -89,7 +89,7 @@ Class=LaTeXView
 Document=Metodologia\Metodologia.tex
 
 [Frame4_View0,0]
-TopLine=58
+TopLine=40
 Cursor=189
 
 [Frame5]

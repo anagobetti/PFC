@@ -1,37 +1,35 @@
 
 \chapter{Revisão Bibliográfica}
 
-Neste capitulo serão abordados todos os conhecimentos necessários para o desenvolvimento do projeto, como as características da Carteira Nacional de Habilitação, as bibliotecas e linguagens utilizadas para o desenvolvimento e principais algoritmos utilizados na implementação.
-
+Neste capitulo serão abordados todos os conhecimentos necessários para o desenvolvimento do projeto, como as características da Carteira Nacional de Habilitação, as bibliotecas e linguagens utilizadas para o desenvolvimento e principais algoritmos e métodos usados na implementação do sistema de leitura automática.
 
 \section{Carteira Nacional de Habilitação}
 \markright{\thesection ~~~ Histórico}
 \label{hist}
 
 
-A CNH, Carteira Nacional de Habilitação, que também é conhecida como carteira de motorista é um documento de identificação obrigatório para qualquer cidadão que pretenda conduzir um veiculo automotor.  Atualmente o código brasileiro divide a CNH em cinco categorias de acordo com o tipo de veículos que o condutor está habilitado a conduzir, sendo elas (DETRAN PR):
-
+A CNH, Carteira Nacional de Habilitação, que também é conhecida como carteira de motorista é um documento de identificação obrigatório para qualquer cidadão que pretenda conduzir um veiculo automotor.  Atualmente o código brasileiro divide a CNH em cinco categorias de acordo com o tipo de veículo que o condutor está habilitado a conduzir, sendo elas (DETRAN PR):
 
 \begin{description}
 	\item[A:] condutor de veículo motorizado de duas ou três rodas, com ou sem carro lateral (motos);
-	\item[B:] condutor de veículo motorizado não abrangido pela categoria A, com peso bruto total inferior a 3.
-	\item[C:]  condutor de veículo motorizado usado para transporte de carga, com peso bruto superior a 3.500 quilos (como caminhões);	
-	\item[D:]   condutor de veículo motorizado usado no transporte de passageiros, com lotação superior a oito lugares além do motorista (ônibus e vans, por exemplo);
-	\item[E:] condutor de combinação de veículos em que a unidade conduzida se enquadre nas categorias B, C ou D e cuja unidade acoplada ou rebocada tenha peso bruto de 6 mil quilos ou mais; ou cuja lotação seja superior a oito lugares; ou, ainda, que seja enquadrado na categoria trailer
+	\item[B:] condutor de veículo motorizado não abrangido pela categoria A, com peso bruto total inferior a 3.500 quilogramas e lotação máxima de oito lugares, além do motorista (automóveis);
+	\item[C:]  condutor de veículo motorizado usado para transporte de carga, com peso bruto superior a 3.500 quilogramas (como caminhões);	
+	\item[D:]  condutor de veículo motorizado usado no transporte de passageiros, com lotação superior a oito lugares além do motorista (ônibus e vans, por exemplo);
+	\item[E:] condutor de combinação de veículos em que a unidade conduzida se enquadre nas categorias B, C ou D e cuja a unidade acoplada ou rebocada tenha peso bruto de 6 mil quilogramas ou mais; ou cuja lotação seja superior a oito lugares; ou, ainda, que seja enquadrado na categoria trailer;
 \end{description}
 
   
-A primeira CNH só pode ser retirada nas categorias A ou B e ela deve participar de cursos teóricos preparatórios, médico e psicotécnico. Após a primeira habilitação existem algumas regras para mudança de categoria (DETRAN MG):
+A primeira CNH só pode ser retirada nas categorias A ou através de cursos teóricos preparatórios, médico e psicotécnico. Após a primeira habilitação existem algumas regras para mudança de categoria (DETRAN MG):
 
 \begin{itemize}
-	\item Categoria B: ter mais de 18 anos completos;
+	\item Categoria A e B: ter mais de 18 anos completos;
 	\item Categoria C: ter, no mínimo, um ano na categoria ''B'';
 	\item Categoria D: ter 21 anos completos, estar habilidade no mínimo a 2 anos na categoria B ou 1 ano na categoria ''C'';
 	\item Categoria E: ter 21 anos completos, estar habilitado, há um ano nas categorias ''C'' ou ''D'';
 \end{itemize}
 
 
-Atualmente a CNH possui, além dos dados acerca da habilitação, fotografia, número da carteira de identidade (RG) e do Cadastro de Pessoa Física (CPF). Assim a CNH pode ser utilizada como um documento de identificação pessoal em todo território nacional (Art. 159 do CTB). Além disto a CNH tem data de validade, ou seja, motoristas com menos de 65 anos devem renovar a carteira a cada 5 anos, após os 65 anos ou para alguns casos especiais o prazo de renovação é de 3 anos. Dessa forma, garante-se que o documento apresentado é sempre recente.
+Atualmente a CNH possui, além dos dados acerca da habilitação, fotografia, número da carteira de identidade (RG) e do Cadastro de Pessoa Física (CPF). Assim a CNH pode ser utilizada como um documento de identificação pessoal em todo território nacional (Art. 159 do CTB). Além disto a CNH tem data de validade, ou seja, motoristas com menos de 65 anos devem renovar a carteira a cada 5 anos e após os 65 anos ou para alguns casos especiais o prazo de renovação é de 3 anos. Dessa forma, garante-se que o documento apresentado é sempre recente.  
   
 \begin{figure}[h]
 	\centering
@@ -46,19 +44,18 @@ Atualmente a CNH possui, além dos dados acerca da habilitação, fotografia, númer
 
 
 \section{Imagem Digital}
-\markright{\thesection ~~~ O Telefone}
-\label{telefone}
 
-As imagens digitais podem ser produzidas por meio de diversos aparelhos, como câmeras de vídeo, câmeras fotográficas, scanners, aparelhos de raio-X, entre outros. A tecnologia da imagem digital permite a codificação digital documentos analógicos, em forma de imagem digital para armazenagem, transmissão em sistemas computadorizados. 
+As imagens digitais podem ser produzidas por meio de diversos aparelhos, como câmeras de vídeo, câmeras fotográficas, scanners, aparelhos de raio-X, entre outros. A tecnologia permite a codificação digital de documentos analógicos, em forma de imagem digital para armazenamento e transmissão em sistemas computadorizados. 
 
-Uma imagem digital é a representação de uma imagem bidimensional como uma sequencia finita de valores digitais.  Cada um destes valores representa um pixel, que é o menor elemento que compõe uma imagem digital ou uma componente de cor de um pixel, no caso de imagens coloridas. 
+Uma imagem digital é a representação de uma figura bidimensional como uma sequencia finita de valores digitais.  Cada um destes valores representa um pixel ou uma componente de cor de um pixel, no caso de imagens coloridas. Um pixel é o menor elemento de uma imagem digital, a partir deles é possível medir a qualidade da imagem, sendo comum atribuir o termo resolução para se referir ao número de pixels em altura e largura tem em uma foto. 
 
-O valor de cada pixel é obtido pela quantização do sinal analógico (carga elétrica) obtido pelo dispositivo de captura, citados anteriormente. Os três tipos principais de imagens são:
+O valor de cada pixel é obtido pela quantização do sinal analógico (carga elétrica) obtido pelos dispositivos de captura, citados anteriormente. Os três tipos principais de imagens são:
+
 
 \begin{itemize}
-	\item Imagens Binárias: Também conhecida como imagens preto e branco. Nestas imagens cada pixel pode assumir valores 0 ou 1. Este tipo de imagem normalmente surge no processamento de uma imagem digital como resultado de uma máscara ou certas operações como segmentação, threshold e ruído (estes conceitos serão discutidos nas próximas sessões).
-	\item Imagens em escala de cinza: Nestas imagens cada pixel é representado por apenas um valor, que pode variar de 0 que indica a cor preta até 255 que indica a cor branca, totalizando 256 tons de cinza diferentes.
-	\item Imagens coloridas: Nestas imagens, cada pixel é representado por pelo menos três informações, uma para cada canal de cor, como por exemplo o RGB que será um dos itens discutidos na próxima sessão. O valor de cada canal e composição da imagem colorida depende do espaço de cores utilizado. 
+	\item Imagens Binárias: Também conhecida como preta e branco. Nestas imagens cada pixel pode assumir valores 0 ou 1. Normalmente surge no processamento de uma imagem digital como resultado de uma máscara, ou certas operações como segmentação, threshold e ruído (estes conceitos serão discutidos nas próximas sessões).
+	\item Imagens em escala de cinza: Cada pixel é representado por apenas um valor, que pode variar de 0, que indica a cor preta, até 255, que indica a cor branca, totalizando 256 tons de cinza diferentes.
+	\item Imagens coloridas: cada pixel é representado por pelo menos três informações, uma para cada canal de cor, por exemplo, o RGB que será um dos itens discutidos nas próximas seções. O valor de cada canal e a composição da imagem colorida depende do espaço de cores utilizado. 
 \end{itemize}
 
 \begin{figure}[h]
@@ -75,9 +72,10 @@ O valor de cada pixel é obtido pela quantização do sinal analógico (carga elétri
 \section{Visão Computacional}
 
 
-A visão computacional é um campo que inclui métodos para a aquisição, processamento, análise e compreensão de imagens. A finalidade dessas análises e processamento é a obtenção de informações numéricas ou simbólicas de imagem, como por exemplo, na forma de decisões (SHAPIRO, 2001). Dessa forma, o objetivo de um sistema de visão computacional é extrair informações úteis a partir de dados de imagem usando modelos construídos com a ajuda da geometria, física, estatística e teoria de aprendizagem. 
+A visão computacional é um campo que inclui métodos para a aquisição, processamento, análise e compreensão de imagens. A finalidade dessas análises e processamentos é a obtenção de informações numéricas ou simbólicas de imagens, por exemplo, na forma de decisões (SHAPIRO, 2001). Dessa forma, o objetivo de um sistema de visão computacional é extrair informações úteis a partir de dados de imagem usando modelos construídos com a ajuda da geometria, física, estatística e teoria de aprendizagem. 
 
-O sistema cognitivo do ser humano processa e extrai informações de imagens a todo momento e utilizar de sistemas computacionais para realizar a mesma atividade é algo extremamente complexo e que exige diversos conhecimentos e abstrações. Para isso a organização de cada sistema depende muito da sua aplicação. No entanto existem algumas funções típicas, que são encontradas em muitos sistemas de visão computacional e normalmente são executadas conforme a imagem XX:
+O sistema cognitivo do ser humano processa e extrai informações de imagens a todo momento, e utilizar de sistemas computacionais para realizar a mesma atividade é algo extremamente complexo e que exige diversos conhecimentos e abstrações. Para isso a organização de cada sistema depende muito da sua aplicação. No entanto, existem algumas funções típicas que são encontradas em muitos sistemas de visão computacional, normalmente são executadas conforme a imagem XX:
+
 
 \begin{figure}[h]
 	\centering
@@ -98,25 +96,26 @@ A primeira etapa consiste em adquirir a imagem digital a partir de uma câmera di
 Uma imagem digital pode possuir muitas informações que podem influenciar negativamente na tomada de decisão do sistema. O processamento permite que estas informações indesejadas sejam ignoradas ou retiradas (ZUECH, 1988). O processamento de imagens envolve técnicas de transformação visando melhorar, segmentar e extrair as características desejadas da imagem. As principais etapas deste processo são:
 
 \begin{itemize}
-	\item Pré processamento: Nessa etapa a imagem é submetida a um processo de realce dos contrastes, deixando-a mais nítida para facilitar as etapas seguintes.
-	\item Segmentação: A segmentação é uma etapa em que será delimitada a os objetos de interesse. 
+	\item Pré-processamento: Nessa etapa a imagem é submetida a um processo de realce dos contrastes, deixando-a mais nítida para facilitar as etapas seguintes.
+	\item Segmentação: É uma etapa em que serão delimitados os objetos de interesse.  
 	\item Detecção: Após a segmentação é necessário determinar quais das áreas delimitadas são realmente necessárias para extrair a informação desejada, no sistema em questão, será possível determinar e classificar o dado da CNH. 
-	\item Interpretação: A interpretação dos dados a interpretação e classificação dos dados detectados. 
+	\item Interpretação: Interpretação e classificação dos dados detectados. 
 \end{itemize}
 
-Nas subseções seguintes serão descritas algumas técnicas e métodos utilizados nesta aplicação. 
+Nas subseções seguintes serão descritas algumas técnicas e métodos utilizados nesta aplicação.
 
 \subsection{Conversão para Escala de Cinza}
 	
-Como já foi discutido nas seções anteriores, as imagens digitais possuem diversas representações. A mais comum é a chamada RGB (Red, Green, Blue) e ela produz várias cores através das três cores básicas: vermelha, verde e azul. Nesta representação cada pixel possui três bytes, um para cada cor, que podem possuir valores entre 0 e 255. Para reproduzir a cor preta as três dimensões devem possuir valores iguais a 0. Para obter a cor vermelha basta colocar 255 na componente R do pixel e 0 nas demais componentes. Dessa forma, é possível criar a cor desejada a partir da combinação ponderada de cada um dos componentes. 
+Como já foi discutido nas seções anteriores, as imagens digitais possuem diversas representações. A mais comum é a conhecida como RGB , que é uma representação formada por 3 canais: vermelho (Red), verde (Green) e azul (Blue), nela são produzidas várias cores por meio da combinação destas três cores básicas. Nessa representação cada pixel possui três bytes, um para cada cor, que podem possuir valores entre 0 e 255. Para reproduzir a cor preta as três dimensões devem possuir valores iguais a 0. Para obter a cor vermelha basta selecionar 255 na componente R do pixel e 0 nas demais componentes. Dessa forma, é possível criar a cor desejada a partir da combinação ponderada de cada um dos componentes. 
+Porém algumas operações do processamento de imagens são facilitados quando os pixels têm apenas uma dimensão, ou seja, quando a imagem está em escala de cinza ou binária. Para converter uma imagem colorida em escala de cinza é feita uma média simples entre os valores de RGB do pixel e esta média é atribuída ao novo valor. 
 
-Porém algumas operações do  processamento de imagens são facilitados quando os pixels têm apenas uma dimensão, ou seja, quando a imagem está em escala de cinza ou binária. Para converter uma imagem colorida em escala de cinza é feita uma média simples entre os valores de RGB do pixel e esta média é atribuída ao novo valor do mesmo. 
 
 \subsection{Binarização}
 
-A identificação de partes de interesse em uma imagem é uma das etapas  mais criticas no processamento de imagens. A segmentação de uma imagem consistem em dividir a imagem em regiões de interesse, isolando aqueles pixeis que não fazem parte do mesmo. 
+A identificação de partes de interesse em uma imagem é uma das etapas mais críticas no processamento de imagens. A binarização de uma imagem consiste em dividir a imagem em regiões de interesse, isolando aqueles pixels que não fazem parte do mesmo. 
 
-O threshold é um valor limite que é usado em um critério de seleção. Todos os pixels de uma imagem são comparados a esse critério e são alterados conforme a necessidade. Um exemplo da aplicação de threshold é comparar todos os pixels a um valor limite e caso sejam maiores ou iguais a esse limiar ele é transformado em pretos (valor 0) e transformando em brancos (valor 255), caso contrário. 
+Os métodos mais simples de limiarização utilizam um único ponto de corte também conhecido por threshold. O threshold é um valor limite utilizado em um critério de seleção. Todos os pixels de uma imagem são comparados a esse critério e são alterados conforme a necessidade. Um exemplo da aplicação de threshold é comparar todos os pixels a um valor limite, caso sejam maiores ou iguais a esse limiar são transformados em pretos (valor 0), e transformados em brancos (valor 255), caso contrário. 
+
 
 \subsection{Segmentação baseada em bordas}
 
@@ -126,32 +125,32 @@ Uma borda é o limite entre duas regiões com propriedades relativamente distintas
 
 Historicamente, uma variedade de detectores de bordas tem sido desenvolvida visando diferentes propósitos, com formulações matemáticas diferenciadas e com propriedades algorítmicas distintas. Em 1986, Canny desenvolveu um processo de detecção de bordas a partir de critérios de quantificação de desempenho de operadores de bordas conhecidos como os critérios de detecção e de localização.
 
+
 \subsection{Transformada de Hough}
 
-A transformada é uma importante técnica para extrair características de uma imagem . Foi desenvolvida por Paul Hough em 1962 e se transformou popular no processamento de imagens em 1981, na publicação do artigo  ''Generalizing the Hough transform to detect arbitrary shapes''. A proposta desta técnica é basicamente a identificação qualquer forma que possa ser representada matematicamente, porém seu uso mais comum é para detecção de linhas, círculos e eclipses em imagens binárias, normalmente a imagem em que a transformada é aplicada passou anteriormente pela operação de reconhecimento de bordas. 
+A transformada é uma importante técnica para extrair características de uma imagem . Foi desenvolvida por Paul Hough em 1962 e se tornou popular no processamento de imagens em 1981, com a publicação do artigo ''Generalizing the Hough transform to detect arbitrary shapes''. A proposta desta técnica é basicamente a identificação de qualquer forma que possa ser representada matematicamente, porém seu uso mais comum é para detecção de linhas, círculos e eclipses em imagens binárias. Normalmente a imagem em que a transformada é aplicada passou anteriormente pela operação de reconhecimento de bordas. 
 
 \section{Sistemas OCR}
 
-Segundo (Bhaskar, 2010), o algoritmo de reconhecimento óptico de caracteres (Optical Character Recognition  OCR) é a tradução , eletrônica ou mecânica, de imagens escaneadas de documentos escritos à mão, datilografados em máquinas de escrever ou impressos, para textos codificados em máquinas.  As aplicações dos sistemas OCR são as mais variadas, indo desde o reconhecimento de placas de automóveis ou de outros tipos de placas e avisos, passando pela digitalização de documentos para o formato texto e finalmente reconhecimento de caligrafias manuais. 
+Segundo (Bhaskar, 2010), o algoritmo de reconhecimento ótico de caracteres (Optical Character Recognition, OCR) é a tradução , eletrônica ou mecânica, de imagens escaneadas de documentos escritos à mão, datilografados em máquinas de escrever ou impressos, para textos codificados em máquinas.  As aplicações dos sistemas OCR são as mais variadas, indo desde o reconhecimento de placas de automóveis ou de outros tipos de placas e avisos, passando pela digitalização de documentos para o formato texto, até o reconhecimento de caligrafias manuais. 
 
-Segundo (Mori, 1992) os primeiros avanços destas tecnologias começaram nos anos 50, inicialmente apenas conceitualmente, mas gradualmente avançando para ferramentas mais concretas. As primeiras versões eram bastante sujeitas à falhas e se baseavam em comparação de documentos ou em imagens como modelos. Com o passar do tempo, concluiu-se que a comparação de modelos não era suficiente para obter bons resultados e começaram os estudos para utilização da analise estrutural dos caracteres para identificação dos mesmo. Esta mudança de abordagem deu origem aos sistemas atuais. 
+Segundo (Mori, 1992) os primeiros avanços dessas tecnologias começaram nos anos 50, inicialmente apenas conceitualmente, mas gradualmente avançando para ferramentas mais concretas. As primeiras versões eram bastante sujeitas a falhas e se baseavam em comparações de documentos ou em imagens como modelos. Com o passar do tempo, concluiu-se que a comparação de modelos não era suficiente para obter bons resultados e começaram os estudos para utilização da analise estrutural dos caracteres para sua identificação. Essa mudança de abordagem deu origem aos sistemas atuais. 
 
-Atualmente, com o barateamento dos computação, aumento da capacidade de processamento (RUMELT,2002 ) e do grau de maturidade da tecnologia OCR, os sistemas de leitura de documentos estão cada vez mais acessíveis às pessoas e novos algoritmos, bem como técnicas para pré-processamento, extração e classificação de dados foram criados (CHERIET, 2007). 
+Atualmente, com o barateamento dos computadores, aumento da capacidade de processamento [RUMELT,2002 ] e do grau de maturidade da tecnologia OCR, os sistemas de leitura de documentos estão cada vez mais acessíveis às pessoas e novos algoritmos, bem como técnicas para pré-processamento, extração e classificação de dados foram criados [CHERIET, 2007]. 
 
 Muito além de reconhecer texto em imagens, leitura automática de documentos refere-se a todo e qualquer processo ou mecanismo que permita extrair, de forma automatizada, a informação textual existente nas imagens dos documentos. Neste projeto pretende-se não somente extrair o texto dos documentos, mas também atribuir sentido à essa informação.  O objetivo deste trabalho é justamente reconhecer e atribuir sentido aos dados extraídos de um documento de identificação, no caso a CNH. 
 
-Existem alguns sistemas de leitura automatizada de documentos, mas a maioria deles utiliza um scanner próprio, como o que pode ser visto na imagem XXX,  para obter a imagem de entrada. Dessa forma, o sistema fica limitado e restrito. Alguns fornecedores, como Mitek e TrustID, possuem ferramentas mobile e web para leitura automática de documentos, porém o fato de não serem soluções nacionais torna o suporte um pouco mais lento e as atualizações quanto à legislação e validade de documentos mais demorada.
+Existem alguns sistemas de leitura automatizada de documentos, mas a maioria deles utiliza um scanner próprio, como o que pode ser visto na imagem XXX,  para obter a imagem de entrada. Dessa forma, o sistema fica limitado e restrito. Alguns fornecedores, como Mitek e TrustID, possuem ferramentas mobile e web para leitura automática de documentos, porém o fato de não serem soluções nacionais torna o suporte um pouco mais lento e as atualizações quanto à legislação e validade de documentos mais demorada. 
 
 
 
-\lipsum[1]
+\clearpage
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=0.75\textwidth]{../../unit.png}
 	\caption{teste}
 	\label{fig:unit}
 \end{figure}
-
 
 
 \section{Resumo do Capítulo}
