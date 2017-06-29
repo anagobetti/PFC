@@ -8,7 +8,7 @@ Neste capitulo serão abordados todos os conhecimentos necessários para o desenvo
 \label{hist}
 
 
-A CNH, Carteira Nacional de Habilitação, que também é conhecida como carteira de motorista é um documento de identificação obrigatório para qualquer cidadão que pretenda conduzir um veiculo automotor.  Atualmente o código brasileiro divide a CNH em cinco categorias de acordo com o tipo de veículo que o condutor está habilitado a conduzir, sendo elas (DETRAN PR):
+A CNH, Carteira Nacional de Habilitação, que também é conhecida como carteira de motorista é um documento de identificação obrigatório para qualquer cidadão que pretenda conduzir um veiculo automotor.  Atualmente o código brasileiro divide a CNH em cinco categorias de acordo com o tipo de veículo que o condutor está habilitado a conduzir, segundo ~\citet{DetranPR}:
 
 \begin{description}
 	\item[A:] condutor de veículo motorizado de duas ou três rodas, com ou sem carro lateral (motos);
@@ -19,7 +19,7 @@ A CNH, Carteira Nacional de Habilitação, que também é conhecida como carteira de
 \end{description}
 
   
-A primeira CNH só pode ser retirada nas categorias A ou através de cursos teóricos preparatórios, médico e psicotécnico. Após a primeira habilitação existem algumas regras para mudança de categoria (DETRAN MG):
+A primeira CNH só pode ser retirada nas categorias A ou por meio de cursos teóricos preparatórios, médico e psicotécnico. Após a primeira habilitação existem algumas regras para mudança de categoria (\citet{DetranMG}):
 
 \begin{itemize}
 	\item Categoria A e B: ter mais de 18 anos completos;
@@ -29,62 +29,59 @@ A primeira CNH só pode ser retirada nas categorias A ou através de cursos teóric
 \end{itemize}
 
 
-Atualmente a CNH possui, além dos dados acerca da habilitação, fotografia, número da carteira de identidade (RG) e do Cadastro de Pessoa Física (CPF). Assim a CNH pode ser utilizada como um documento de identificação pessoal em todo território nacional (Art. 159 do CTB). Além disto a CNH tem data de validade, ou seja, motoristas com menos de 65 anos devem renovar a carteira a cada 5 anos e após os 65 anos ou para alguns casos especiais o prazo de renovação é de 3 anos. Dessa forma, garante-se que o documento apresentado é sempre recente.  
-  
+Atualmente a CNH possui, além dos dados acerca da habilitação, fotografia, número da carteira de identidade (RG) e do Cadastro de Pessoa Física (CPF). Assim a CNH pode ser utilizada como um documento de identificação pessoal em todo território nacional (Art. 159 do \citet{CTB}). Além disto a CNH tem data de validade, ou seja, motoristas com menos de 65 anos devem renovar a carteira a cada 5 anos e após os 65 anos ou para alguns casos especiais o prazo de renovação é de 3 anos. Dessa forma, garante-se que o documento apresentado é sempre recente.  
+
+Por servir como documento de habilitação e documento de identificação, este é um dos documentos mais falsificados do Brasil. Segundo a \citet{Serasa}, a cada 15 segundos alguém tenta cometer uma fraude usando documentos falsos no Brasil. Estes documentos falsificados são utilizados na tentativas de golpes como abrir contas bancárias em nome de outras pessoas, pedir financiamentos, cartões de crédito entre outros. Com o intuito de impedir a falsificação e adulteração do documento de habilitação, o Conselho Nacional de Transito (Contran) busca investir em novos dispositivos de segurança. Dessa forma, a partir do dia 31 de dezembro de 2017 entra em vigor um novo modelo de CNH, conforme pode ser visto na figura \ref{fig:NOVACNH}.
+
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.75\textwidth]{../../cnh2006.jpg}
-	\caption{CNH Caption}
-	\label{fig:cnh2006}
+		\includegraphics[width=1.00\textwidth]{../../NOVA-CNH.jpg}
+	\caption{Comparação entre os dois modelos de carteira de habilitação existentes no Brasil no ano de 2017}
+	\label{fig:NOVACNH}
 \end{figure}
 
-
-\color[rgb]{1,0,0}(mudar essa imagem e usar mais ela)
-\color[rgb]{0,0,0}
-
+Pela análise da imagem acima, percebe-se que há uma grande alteração de tonalidades no novo modelo, mas os campos continuam seguindo a mesma ordem, desta forma as alterações realizadas não tem muito impacto no desenvolvimento deste trabalho. Além da clara mudança de cor, haverá um mapa do estado, inclusão de dois números de identificação nacional (Registro Nacional e número de espelho da CNH), entre outros dispositivos de segurança. A mudança para o novo modelo é gradual, portanto os motoristas não precisarão trocar o documento atual caso ele ainda seja válido, dessa forma os dois modelos irão coexistir por 5 anos. 
 
 \section{Imagem Digital}
 
 As imagens digitais podem ser produzidas por meio de diversos aparelhos, como câmeras de vídeo, câmeras fotográficas, scanners, aparelhos de raio-X, entre outros. A tecnologia permite a codificação digital de documentos analógicos, em forma de imagem digital para armazenamento e transmissão em sistemas computadorizados. 
 
-Uma imagem digital é a representação de uma figura bidimensional como uma sequencia finita de valores digitais.  Cada um destes valores representa um pixel ou uma componente de cor de um pixel, no caso de imagens coloridas. Um pixel é o menor elemento de uma imagem digital, a partir deles é possível medir a qualidade da imagem, sendo comum atribuir o termo resolução para se referir ao número de pixels em altura e largura tem em uma foto. 
+Uma imagem digital é a representação de uma figura bidimensional como uma sequencia finita de valores digitais.  Cada um destes valores representa um pixel ou uma componente de cor de um pixel, no caso de imagens coloridas. Um pixel é o menor elemento de uma imagem digital, a partir deles é possível medir a qualidade da imagem, sendo comum atribuir o termo resolução para se referir ao número de pixels em altura e largura em uma foto. 
 
 O valor de cada pixel é obtido pela quantização do sinal analógico (carga elétrica) obtido pelos dispositivos de captura, citados anteriormente. Os três tipos principais de imagens são:
 
-
 \begin{itemize}
-	\item Imagens Binárias: Também conhecida como preta e branco. Nestas imagens cada pixel pode assumir valores 0 ou 1. Normalmente surge no processamento de uma imagem digital como resultado de uma máscara, ou certas operações como segmentação, threshold e ruído (estes conceitos serão discutidos nas próximas sessões).
+	\item Imagens coloridas: cada pixel é representado por pelo menos três informações, uma para cada canal de cor, por exemplo, o RGB que será um dos itens discutidos nas próximas seções. O valor de cada canal e a composição da imagem colorida depende do espaço de cores utilizado.
 	\item Imagens em escala de cinza: Cada pixel é representado por apenas um valor, que pode variar de 0, que indica a cor preta, até 255, que indica a cor branca, totalizando 256 tons de cinza diferentes.
-	\item Imagens coloridas: cada pixel é representado por pelo menos três informações, uma para cada canal de cor, por exemplo, o RGB que será um dos itens discutidos nas próximas seções. O valor de cada canal e a composição da imagem colorida depende do espaço de cores utilizado. 
+	\item Imagens Binárias: Também conhecida como preta e branco. Nestas imagens cada pixel pode assumir valores 0 ou 1. Normalmente surge no processamento de uma imagem digital como resultado de uma máscara, ou certas operações como segmentação, threshold e ruído (estes conceitos serão discutidos nas próximas sessões).
+
 \end{itemize}
-
+\clearpage
 \begin{figure}[h]
-	\centering
-		\includegraphics[width=1.00\textwidth]{../../TiposImagem.png}
-	\label{fig:TiposImagem}
-\end{figure}
+		\centering
+			\includegraphics[width=1.00\textwidth]{../../TiposImagem.png}
+		\caption{Categorias de imagens, coloridas, escala de cinza e binárias}
+		\label{fig:TiposImagem}
+	\end{figure}
 
-	
-%\subsection{Resolução e Definição}
-
-%\subsection{Escala de Cor}
 
 \section{Visão Computacional}
 
 
-A visão computacional é um campo que inclui métodos para a aquisição, processamento, análise e compreensão de imagens. A finalidade dessas análises e processamentos é a obtenção de informações numéricas ou simbólicas de imagens, por exemplo, na forma de decisões (SHAPIRO, 2001). Dessa forma, o objetivo de um sistema de visão computacional é extrair informações úteis a partir de dados de imagem usando modelos construídos com a ajuda da geometria, física, estatística e teoria de aprendizagem. 
+A visão computacional é um campo que inclui métodos para a aquisição, processamento, análise e compreensão de imagens. A finalidade dessas análises e processamentos é a obtenção de informações numéricas ou simbólicas de imagens, por exemplo, na forma de decisões (\citet{SHAPIRO}). Dessa forma, o objetivo de um sistema de visão computacional é extrair informações úteis a partir de dados de imagem usando modelos construídos com a ajuda da geometria, física, estatística e teoria de aprendizagem. 
 
-O sistema cognitivo do ser humano processa e extrai informações de imagens a todo momento, e utilizar de sistemas computacionais para realizar a mesma atividade é algo extremamente complexo e que exige diversos conhecimentos e abstrações. Para isso a organização de cada sistema depende muito da sua aplicação. No entanto, existem algumas funções típicas que são encontradas em muitos sistemas de visão computacional, normalmente são executadas conforme a imagem XX:
+O sistema cognitivo do ser humano processa e extrai informações de imagens a todo momento, e utilizar de sistemas computacionais para realizar a mesma atividade é algo extremamente complexo e que exige diversos conhecimentos e abstrações. Para isso a organização de cada sistema depende muito da sua aplicação. No entanto, existem algumas funções típicas que são encontradas em muitos sistemas de visão computacional, normalmente são executadas conforme a figura \ref{fig:ProcessamentoImagem}:
 
+\clearpage
 
 \begin{figure}[h]
 	\centering
-		\includegraphics{../../ProcessamentoImagem.jpg}
+		\includegraphics[width=1.00\textwidth]{../../ProcessamentoImagem.jpg}
+	\caption{Etapas do processamento de imagens}
 	\label{fig:ProcessamentoImagem}
 \end{figure}
 
 
-%\subsection{}
 
 \textbf{Aquisição de imagens}	
 
@@ -93,7 +90,7 @@ A primeira etapa consiste em adquirir a imagem digital a partir de uma câmera di
 
 \textbf{Processamento}
 
-Uma imagem digital pode possuir muitas informações que podem influenciar negativamente na tomada de decisão do sistema. O processamento permite que estas informações indesejadas sejam ignoradas ou retiradas (ZUECH, 1988). O processamento de imagens envolve técnicas de transformação visando melhorar, segmentar e extrair as características desejadas da imagem. As principais etapas deste processo são:
+Uma imagem digital pode possuir muitas informações que podem influenciar negativamente na tomada de decisão do sistema. O processamento permite que estas informações indesejadas sejam ignoradas ou retiradas (\citet{Zuech}). O processamento de imagens envolve técnicas de transformação visando melhorar, segmentar e extrair as características desejadas da imagem. As principais etapas deste processo são:
 
 \begin{itemize}
 	\item Pré-processamento: Nessa etapa a imagem é submetida a um processo de realce dos contrastes, deixando-a mais nítida para facilitar as etapas seguintes.
@@ -101,6 +98,8 @@ Uma imagem digital pode possuir muitas informações que podem influenciar negativ
 	\item Detecção: Após a segmentação é necessário determinar quais das áreas delimitadas são realmente necessárias para extrair a informação desejada, no sistema em questão, será possível determinar e classificar o dado da CNH. 
 	\item Interpretação: Interpretação e classificação dos dados detectados. 
 \end{itemize}
+
+\clearpage 
 
 Nas subseções seguintes serão descritas algumas técnicas e métodos utilizados nesta aplicação.
 
@@ -131,31 +130,30 @@ Historicamente, uma variedade de detectores de bordas tem sido desenvolvida visa
 A transformada é uma importante técnica para extrair características de uma imagem . Foi desenvolvida por Paul Hough em 1962 e se tornou popular no processamento de imagens em 1981, com a publicação do artigo ''Generalizing the Hough transform to detect arbitrary shapes''. A proposta desta técnica é basicamente a identificação de qualquer forma que possa ser representada matematicamente, porém seu uso mais comum é para detecção de linhas, círculos e eclipses em imagens binárias. Normalmente a imagem em que a transformada é aplicada passou anteriormente pela operação de reconhecimento de bordas. 
 
 \section{Sistemas OCR}
+\label{sec:SistemasOCR}
 
-Segundo (Bhaskar, 2010), o algoritmo de reconhecimento ótico de caracteres (Optical Character Recognition, OCR) é a tradução , eletrônica ou mecânica, de imagens escaneadas de documentos escritos à mão, datilografados em máquinas de escrever ou impressos, para textos codificados em máquinas.  As aplicações dos sistemas OCR são as mais variadas, indo desde o reconhecimento de placas de automóveis ou de outros tipos de placas e avisos, passando pela digitalização de documentos para o formato texto, até o reconhecimento de caligrafias manuais. 
+Segundo \citet{Bhaskar}, o algoritmo de reconhecimento ótico de caracteres (Optical Character Recognition, OCR) é a tradução , eletrônica ou mecânica, de imagens escaneadas de documentos escritos à mão, datilografados em máquinas de escrever ou impressos, para textos codificados em máquinas.  As aplicações dos sistemas OCR são as mais variadas, indo desde o reconhecimento de placas de automóveis ou de outros tipos de placas e avisos, passando pela digitalização de documentos para o formato texto, até o reconhecimento de caligrafias manuais. 
 
-Segundo (Mori, 1992) os primeiros avanços dessas tecnologias começaram nos anos 50, inicialmente apenas conceitualmente, mas gradualmente avançando para ferramentas mais concretas. As primeiras versões eram bastante sujeitas a falhas e se baseavam em comparações de documentos ou em imagens como modelos. Com o passar do tempo, concluiu-se que a comparação de modelos não era suficiente para obter bons resultados e começaram os estudos para utilização da analise estrutural dos caracteres para sua identificação. Essa mudança de abordagem deu origem aos sistemas atuais. 
+Segundo \citet{Mori} os primeiros avanços dessas tecnologias começaram nos anos 50, inicialmente apenas conceitualmente, mas gradualmente avançando para ferramentas mais concretas. As primeiras versões eram bastante sujeitas a falhas e se baseavam em comparações de documentos ou em imagens como modelos. Com o passar do tempo, concluiu-se que a comparação de modelos não era suficiente para obter bons resultados e começaram os estudos para utilização da analise estrutural dos caracteres para sua identificação. Essa mudança de abordagem deu origem aos sistemas atuais. 
 
-Atualmente, com o barateamento dos computadores, aumento da capacidade de processamento [RUMELT,2002 ] e do grau de maturidade da tecnologia OCR, os sistemas de leitura de documentos estão cada vez mais acessíveis às pessoas e novos algoritmos, bem como técnicas para pré-processamento, extração e classificação de dados foram criados [CHERIET, 2007]. 
+Atualmente, com o barateamento dos computadores, aumento da capacidade de processamento (\citet{Lins2012})e do grau de maturidade da tecnologia OCR, os sistemas de leitura de documentos estão cada vez mais acessíveis às pessoas e novos algoritmos, bem como técnicas para pré-processamento, extração e classificação de dados foram criados (\citet{Cheriet}). 
 
-Muito além de reconhecer texto em imagens, leitura automática de documentos refere-se a todo e qualquer processo ou mecanismo que permita extrair, de forma automatizada, a informação textual existente nas imagens dos documentos. Neste projeto pretende-se não somente extrair o texto dos documentos, mas também atribuir sentido à essa informação.  O objetivo deste trabalho é justamente reconhecer e atribuir sentido aos dados extraídos de um documento de identificação, no caso a CNH. 
+Muito além de reconhecer texto em imagens, leitura automática de documentos refere-se a todo e qualquer processo ou mecanismo que permita extrair, de forma automatizada, a informação textual existente nas imagens dos documentos. Neste projeto pretende-se não somente extrair o texto dos documentos, mas também atribuir sentido à essa informação.  
 
-Existem alguns sistemas de leitura automatizada de documentos, mas a maioria deles utiliza um scanner próprio, como o que pode ser visto na imagem XXX,  para obter a imagem de entrada. Dessa forma, o sistema fica limitado e restrito. Alguns fornecedores, como Mitek e TrustID, possuem ferramentas mobile e web para leitura automática de documentos, porém o fato de não serem soluções nacionais torna o suporte um pouco mais lento e as atualizações quanto à legislação e validade de documentos mais demorada. 
+Existem alguns sistemas de leitura automatizada de documentos, mas a maioria deles utiliza um scanner próprio, como o que pode ser visto na figura \ref{fig:unit},  para obter a imagem de entrada. Dessa forma, o sistema fica limitado e restrito. Alguns fornecedores, como Mitek e TrustID, possuem ferramentas mobile e web para leitura automática de documentos, porém o fato de não serem soluções nacionais torna o suporte um pouco mais lento e as atualizações quanto à legislação e validade de documentos mais demorada. 
 
 
-
-\clearpage
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=0.75\textwidth]{../../unit.png}
-	\caption{teste}
+	\caption{Modelo de scanner utilizado em sistemas de digitalização de documentos existente atualmente}
 	\label{fig:unit}
 \end{figure}
 
 
 \section{Resumo do Capítulo}
 
-Esse capítulo teve como objetivo uma revisão bibliográfica da teoria de visão computacional e etapas de processamento de imagens contextualizadas no sistema de leitura automática de documento. Com base nas informações apresentadas, no próximo capítulo será detalhado como essas técnicas foram utilizadas para a elaboração do projeto realizado.
+Esse capítulo tem como objetivo uma revisão bibliográfica da teoria de visão computacional e etapas de processamento de imagens contextualizadas no sistema de leitura automática de documento. Com base nas informações apresentadas, no próximo capítulo será detalhado como essas técnicas foram utilizadas para a elaboração do projeto realizado.
 
 
 \clearpage

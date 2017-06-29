@@ -129,7 +129,7 @@ namespace AnaliseCNH
                         using (VectorOfPoint approxContour = new VectorOfPoint())
                         {
                             CvInvoke.ApproxPolyDP(contour, approxContour, CvInvoke.ArcLength(contour, true) * 0.05, true);
-                            if (CvInvoke.ContourArea(approxContour, false) > 250) //only consider contours with area greater than 250
+                            if (CvInvoke.ContourArea(approxContour, false) > 15) //only consider contours with area greater than 250
                             {
                                 CvInvoke.DrawContours(imageretorno, contours, i, new MCvScalar(0, 0, 255));
 

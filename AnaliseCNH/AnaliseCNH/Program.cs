@@ -18,7 +18,7 @@ namespace AnaliseCNH
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Application.Run(new Form1());
             /*Image<Bgr, Byte> imgOriginal;
             Image<Gray, byte> imgGray;
 

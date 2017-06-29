@@ -55,6 +55,7 @@ namespace AnaliseCNH
             processor.ObterImagemCinza(imgOriginal, out gray1);
             ObterContornos();
             ObterLinha();
+         //   ObterContornoImagem();
             ObterHistograma();
             imgCinza0.Image = imgOriginal;
             imgCanny1.Image = gray1;
@@ -73,11 +74,24 @@ namespace AnaliseCNH
 
         }
 
+        private void ObterContornoImagem()
+        {
+            processor.ObterContornoImagem(canny1, out color);
+            imgCinza1.Image = color;
+
+        }
+
         private void ObterHistograma()
         {
             Form frm = new Form();
 
             HistogramBox histo = new HistogramBox();
+
+            DenseHistogram Histo = new DenseHistogram(255, new RangeF(0, 255));
+
+            Image<Gray, Byte> img2Blue = color.Convert<Gray, byte>();
+           
+            Histo.Calculate(new Image<Gray, Byte>[] { img2Blue }, true, null);
 
             histo.ClearHistogram();
             histo.GenerateHistograms(color.Convert<Gray, byte>(), 255);

@@ -1,0 +1,253 @@
+\begin{thebibliography}{40}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Tru()]{TrustId}
+Trustid.
+\newblock URL \url{https://www.trustid.com/}.
+
+\bibitem[mit()]{mitek}
+Mitek.
+\newblock URL \url{https://www.miteksystems.com/}.
+
+\bibitem[Emg(2017)]{EmguSite}
+{EmguCV}, 2017.
+\newblock URL \url{http://www.emgu.com/wiki/index.php/Main{\_}Page}.
+
+\bibitem[Almeida et~al.()Almeida, Colombini, Sim{\~{o}}es, and
+  Sorocaba]{Almeida}
+Aline Gabriel~De Almeida, Esther~Luna Colombini, Silva Sim{\~{o}}es, and
+  Campus~De Sorocaba.
+\newblock {Identifica{\c{c}}{\~{a}}o da posi{\c{c}}{\~{a}}o de objetos
+  circulares coloridos a partir das imagens de uma webcam usando a biblioteca
+  OpenCV Material e M{\'{e}}todos Agradecimentos Resultados e Discuss{\~{a}}o}.
+\newblock page~26.
+
+\bibitem[Ara{\'{u}}jo(2015)]{Araujo2015}
+Alex Ara{\'{u}}jo.
+\newblock {Sistema de hardware e software para verifica{\c{c}}{\~{a}}o de
+  pre{\c{c}}o em produtos utilizando c{\'{o}}digo de barras}.
+\newblock 2015.
+
+\bibitem[Baseados and Imagens(2007)]{Baseados2007}
+Padr{\~{o}}es Baseados and E~M Imagens.
+\newblock {PADR{\~{O}}ES BASEADOS EM IMAGENS DIGITAIS . F{\'{a}}tima Aparecida
+  Tagliaferro Jaguari{\'{u}}na}.
+\newblock 2007.
+
+\bibitem[Bertel et~al.(2006)Bertel, Barkowsky, Engel, and Freksa]{Bertel2006}
+Sven Bertel, Thomas Barkowsky, Dominik Engel, and Christian Freksa.
+\newblock {Computational Modeling of Reasoning with Mental Images: Basic
+  Requirements *}.
+\newblock \emph{Review Literature And Arts Of The Americas}, \penalty0
+  (Iccm):\penalty0 50--55, 2006.
+
+\bibitem[Bhaskar et~al.(2010)Bhaskar, Lavassar, and Green]{Bhaskar}
+S~Bhaskar, N~Lavassar, and S.~Green.
+\newblock {Implementing Optical Character Recognition on the Android Operating
+  System for Business Cards}.
+\newblock 2010.
+
+\bibitem[BORST and KOSSLYN(2008)]{BORST2008}
+G.~BORST and S.~M. KOSSLYN.
+\newblock {Visual mental imagery and visual perception: Structural equivalence
+  revealed by scanning processes}.
+\newblock \emph{Memory {\&} Cognition}, 36\penalty0 (4):\penalty0 849--862,
+  2008.
+\newblock ISSN 0090-502X.
+\newblock \doi{10.3758/MC.36.4.849}.
+\newblock URL \url{http://www.springerlink.com/index/10.3758/MC.36.4.849}.
+
+\bibitem[Bradski and Kaehler(2008)]{OpenCV}
+G.~Bradski and A.~Kaehler.
+\newblock \emph{Learning OpenCV: Computer Vision with the OpenCV Library}.
+\newblock O'Reilly Media, 2008.
+\newblock ISBN 9780596554040.
+\newblock URL \url{https://books.google.com.br/books?id=seAgiOfu2EIC}.
+
+\bibitem[CABRAL and MACHADO(2014)]{CABRAL2014}
+FABIO~AUGUSTO CABRAL and VICTOR HUGO~PEREIRA MACHADO.
+\newblock {Identificador de placa veicular: alternativa para seguran{\c{c}}a em
+  escolas}.
+\newblock \emph{Universidade Tecnol{\'{o}}gica Federal Do Paran{\'{a}}}, 2014.
+
+\bibitem[Canestraro(2013)]{Canestraro2013}
+Amanda Canestraro.
+\newblock {Sistema Biom{\'{e}}trico Baseado na An{\'{a}}lise da Geometria da
+  M{\~{a}}o}.
+\newblock page~72, 2013.
+
+\bibitem[Carlos and Boa(2016)]{Carlos2016}
+Henrique Carlos and Fonte Boa.
+\newblock {Utiliza{\c{c}}{\~{a}}o de t{\'{e}}cnicas de Reconhecimento de
+  Padr{\~{o}}es para identifica{\c{c}}{\~{a}}o de ataques de DNS Spoofing em
+  redes locais}.
+\newblock 2016.
+
+\bibitem[Cheriet(2007)]{Cheriet}
+Mohamed Cheriet.
+\newblock {Optical character recognition devices}.
+\newblock 2007.
+
+\bibitem[CONTRAN()]{Contran}
+CONTRAN.
+\newblock {Conselho Nacional de Tr{\^{a}}nsito}.
+\newblock URL \url{http://www.denatran.gov.br/index.php/contran}.
+
+\bibitem[Correa(2014)]{Correa2014}
+Marcos Vinicius da~Cruz Correa.
+\newblock {Controle de rob{\^{o}}s m{\'{o}}veis utilizando Kinect}.
+\newblock 2014.
+
+\bibitem[CTB(1997)]{CTB}
+CTB.
+\newblock {C{\'{o}}digo de Tr{\^{a}}nsito Brasileiro}.
+\newblock 1997.
+\newblock URL \url{http://www.planalto.gov.br/ccivil_03/leis/L9503.htm}.
+
+\bibitem[de~Oliveira(2010)]{Oliveira2010}
+Leonardo~Augusto de~Oliveira.
+\newblock {Localiza{\c{c}}{\~{a}}o e reconhecimento de caracteres em placas de
+  autom{\'{o}}veis}.
+\newblock 2010.
+
+\bibitem[{DETRAN MG}(2017)]{DetranMG}
+{DETRAN MG}.
+\newblock {Departamento de Transito de Minas Gerais}.
+\newblock 2017.
+\newblock URL \url{http://www.detran.mg.gov.br}.
+
+\bibitem[{DETRAN PR}(2017)]{DetranPR}
+{DETRAN PR}.
+\newblock {Departamento de Transito do Parana}.
+\newblock 2017.
+\newblock URL \url{http://www.detran.pr.gov.br}.
+
+\bibitem[do~Nascimento(2012)]{Nascimento2012}
+Jean~Dias do~Nascimento.
+\newblock {Detec{\c{c}}{\~{a}}o e reconhecimento de placa automotiva com baixo
+  custo}.
+\newblock 2012.
+
+\bibitem[Em and Coloridas()]{Em}
+Visuais Em and Imagens Coloridas.
+\newblock {Identifica{\c{c}}{\~{a}}o de esp{\'{e}}cies de peixes utilizando
+  histogramas de palavras visuais em imagens coloridas}.
+
+\bibitem[{Fady Aboujaoude}(2014)]{FadyAboujaoude2014}
+{Fady Aboujaoude}.
+\newblock {Desenvolvimento de um Sistema de Baixo Custo para
+  Rejei{\c{c}}{\~{a}}o de Objetos Indesej{\'{a}}veis em Linhas de
+  Produ{\c{c}}{\~{a}}o Usando Vis{\~{a}}o Computacional}.
+\newblock page~71, 2014.
+
+\bibitem[Hirama(2014)]{Hirama2014}
+Edgar~Tamio Hirama.
+\newblock {Desenvolvimento de aplica{\c{c}}{\~{a}}o android para reconhecimento
+  {\'{o}}ptico de caracteres em brinco de identifica{\c{c}}{\~{a}}o animal}.
+\newblock 2014.
+
+\bibitem[ISO/IEC(2011)]{ISO}
+ISO/IEC.
+\newblock {Systems and software engineering \- Life cycle processes \-
+  Requirements engineering }.
+\newblock 2011.
+
+\bibitem[JUNIOR(2014)]{JUNIOR2014}
+ILSON AKITO~SHIGEHARU JUNIOR.
+\newblock {Estudo da viabilidade do uso de um OCR na placa Beagleboard e sua
+  integra{\c{c}}{\~{a}}o no xLupa embarcado}.
+\newblock \emph{Universidade Estadual do Oeste do Paran{\'{a}}}, \penalty0
+  (45), 2014.
+
+\bibitem[Lins(2012)]{Lins2012}
+Luiz Fernando Miranda~Vieira Lins.
+\newblock {Reconhecimento {\'{o}}tipo de caracteres (OCR) e an{\'{a}}lise de
+  sistemas OCR baseados em c{\'{o}}digo aberto}.
+\newblock 2012.
+
+\bibitem[Lopes(2015)]{Lopes2015}
+Ludmila de Oliveira~Moreira Lopes.
+\newblock {Detec{\c{c}}{\~{a}}o de Movimentos Suspeitos Utilizando Vis{\~{a}}o
+  Computacional}.
+\newblock 2015.
+
+\bibitem[Machado and Souki(2004)]{Machado2004}
+Andr{\'{e}}~Wilson Machado and Bernardo~Quiroga Souki.
+\newblock {Simplificando a obten{\c{c}}{\~{a}}o e a utiliza{\c{c}}{\~{a}}o de
+  imagens digitais: scanners e c{\^{a}}meras digitais}.
+\newblock \emph{Revista Dental Press de Ortodontia e Ortopedia Facial}, pages
+  133--156, 2004.
+\newblock \doi{10.1590/S1415-54192004000400012}.
+\newblock URL
+  \url{http://www.scielo.br/scielo.php?script=sci{\_}arttext{\&}pid=S1415-54192004000400012{\&}lang=pt}.
+
+\bibitem[Manzi(2007)]{Manzi2007}
+Filipe~Augusto Manzi.
+\newblock {Aplica{\c{c}}{\~{a}}o de vis{\~{a}}o computacional para
+  extra{\c{c}}{\~{a}}o de caracter{\'{i}}sticas em imagens do olho humano}.
+\newblock page~47, 2007.
+
+\bibitem[Mari et~al.(2010)Mari, Carlos, and da~Silveira]{Mari2010}
+Hugo Mari, Jos{\'{e}} Carlos, and Jos{\'{e}} Carlos~Cavalheiro da~Silveira.
+\newblock {Sobre a cogni{\c{c}}{\~{a}}o visual}.
+\newblock \emph{Scripta}, 14\penalty0 (26):\penalty0 3--26, 2010.
+
+\bibitem[Miguel(2013)]{RuiMiguel}
+Rui Miguel.
+\newblock {Superf{\'{i}}cies Interativas com Kinect}.
+\newblock 2013.
+
+\bibitem[Mori et~al.(1992)Mori, Suen, and Yamamoto]{Mori}
+S~Mori, C.Y. Suen, and K.~Yamamoto.
+\newblock {Historical review of OCR research and development}.
+\newblock 1992.
+
+\bibitem[Nascimento(2015)]{Nascimento2015}
+Victor Nascimento.
+\newblock {Implementa{\c{c}}{\~{a}}o de um sistema de identifica{\c{c}}{\~{a}}o
+  facial utilizando Linux Embarcado}.
+\newblock 2015.
+
+\bibitem[Pinheiro and Martins(2013)]{Pinheiro2013}
+Beatriz Pinheiro and Renato Martins.
+\newblock {Carteira de habilita{\c{c}}{\~{a}}o falsa - Ci{\^{e}}ncia da
+  falsidade ideol{\'{o}}gica - Venda - Intermedia{\c{c}}{\~{a}}o - Art . 297 do
+  C{\'{o}}digo Penal - Condena{\c{c}}{\~{a}}o - Estelionato -
+  Desclassifica{\c{c}}{\~{a}}o - Impossibilidade - Indu{\c{c}}{\~{a}}o a erro
+  do comprador - N{\~{a}}o ocorr{\^{e}}ncia - Pena - Dosimetria - Maus a}.
+\newblock pages 321--323, 2013.
+
+\bibitem[Serasa()]{Serasa}
+Serasa.
+\newblock {Serasa Consumidor}.
+\newblock URL \url{https://www.serasaconsumidor.com.br}.
+
+\bibitem[SHAPIRO(2001)]{SHAPIRO}
+L.~G. SHAPIRO.
+\newblock {Computer Vision}.
+\newblock 2001.
+
+\bibitem[Shin(2013)]{Shin2013}
+Shi Shin.
+\newblock \emph{{Emgu CV Essentials}}.
+\newblock 2013.
+\newblock URL
+  \url{http://www.amazon.com/Emgu-CV-Essentials-Shin/dp/1783559527/ref=sr{\_}1{\_}1?s=books{\&}ie=UTF8{\&}qid=1415059990{\&}sr=1-1{\&}keywords=emgu+cv}.
+
+\bibitem[Waters and J{\'{u}}nior(1997)]{Waters1997}
+DJ~Waters and JLP J{\'{u}}nior.
+\newblock \emph{{Do microfilme {\`{a}} imagem digital}}.
+\newblock 1997.
+\newblock ISBN 8570090536.
+\newblock URL \url{http://www.arqsp.org.br/cpba/pdf{\_}cadtec/49.pdf}.
+
+\bibitem[ZUECH(1988)]{Zuech}
+N~ZUECH.
+\newblock {Understanding and Applying Machihe Vision }.
+\newblock \emph{Yardley, Pennsylvania: Marcel Dekker INC}, 2 ed, 1988.
+
+\end{thebibliography}

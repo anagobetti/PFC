@@ -1,8 +1,18 @@
 \select@language {brazil}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces CNH Caption}}{4}{figure.2.1}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Compara\c c\~ao entre os dois modelos de carteira de habilita\c c\~ao existentes no Brasil no ano de 2017}}{5}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Categorias de imagens, coloridas, escala de cinza e bin\'arias}}{6}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Etapas do processamento de imagens}}{7}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Modelo de scanner utilizado em sistemas de digitaliza\c c\~ao de documentos existente atualmente}}{10}{figure.2.4}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Metodologia adotada para identifica\c c\~ao dos campos. Na figura o ponto (x,y) determina a coordenada inicial do ret\^angulo onde o dado est\'a contido, L a largura do campo e A a altura}}{13}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Arquitetura do sistema de leitura autom\'atica}}{14}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagrama de funcionamento do sistema}}{15}{figure.3.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Ciclo de desenvolvimento de um projeto}}{12}{figure.4.1}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces a) Histograma da imagem do documento ap\'os a convers\~ao para escala de cinza e b) Histograma ap\'os a sele\c c\~ao da faixa cinza de interesse}}{18}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces a) Imagem da CNH convertida em escala de cinza, sem tratamento e b) ap\'os a sele\c c\~ao da faixa cinza de interesse }}{19}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Resultado do processamento ap\'os a obten\c c\~ao das linhas}}{20}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Interface desenvolvida para o prot\'otipo}}{21}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Resultados obtidos para o novo modelo de CNH}}{22}{figure.4.5}
 \addvspace {10\p@ }

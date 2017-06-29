@@ -77,9 +77,20 @@ namespace AnaliseCNH
                     processedImage = cnhController.ProcessImage(imgOriginal);
                     if (cnhController.faces.Count > 0)
                     {
+
                         contourController.ObterListaLinhas(imgOriginal);
+                       // CvInvoke.Rectangle(imgOriginal, cnhController.faces[0], new Bgr(Color.Red).MCvScalar, 2);
+
                         if (contourController.listOfLines.Count > 0)
                         {
+                            foreach (LineSegment2D lline in contourController.listOfLines)
+                            {
+                                //if (Math.Abs(lline.Length) >= 10)
+                                //{
+                               // CvInvoke.Line(imgOriginal, lline.P1, lline.P2, new Bgr(225, 0, 0).MCvScalar, 2, LineType.FourConnected);
+                                //}
+                            }
+
                             #region Nome
 
                             List<LineSegment2D> yMenor1 = contourController.listOfLines.Where(l => l.P1 != null && l.P1.Y < cnhController.faces[0].Y && l.P1.X < cnhController.faces[0].X).ToList<LineSegment2D>();
@@ -87,7 +98,7 @@ namespace AnaliseCNH
                             yMenor1 = yMenor1.Where(l => l.Length > 10).ToList<LineSegment2D>();
                             yMenor1 = yMenor1.Where(l => l.P1.X > 150).OrderByDescending(l1 => l1.P1.Y).ToList<LineSegment2D>();
                             LineSegment2D line = yMenor1.FirstOrDefault();
-                            CvInvoke.Line(processedImage, line.P1, line.P2, new Bgr(Color.Green).MCvScalar, 2, LineType.FourConnected);
+                            //  CvInvoke.Line(processedImage, line.P1, line.P2, new Bgr(Color.Green).MCvScalar, 2, LineType.FourConnected);
                             int xInferior = line.P1.X > line.P2.X ? line.P1.X : line.P2.X;
                             int YInferior = line.P1.Y > line.P2.Y ? line.P1.Y : line.P2.Y;
 
@@ -97,7 +108,27 @@ namespace AnaliseCNH
                             Image<Gray, byte> gray = imgOriginal.Convert<Gray, Byte>();
                             Image<Gray, byte> grayImage = gray.Clone();
 
-                            gray = gray.ThresholdBinary(new Gray(121), new Gray(255));
+                            double min = 10;
+                            double max = 255;
+                            double min2 = min; 
+                            gray = gray.ThresholdBinary(new Gray(min), new Gray(max));
+                            grayImage = grayImage.ThresholdToZero(new Gray(min2));
+                            Form frm = new Form();
+
+                            ImageBox imagebox = new ImageBox();
+                            imagebox.Image = gray;
+                            frm.Controls.Add(imagebox);
+                            imagebox.Dock = DockStyle.Fill;
+                            frm.ShowDialog();
+                            /*
+                            Form frm2 = new Form();
+
+                            ImageBox imagebox2 = new ImageBox();
+                            imagebox2.Image = grayImage;
+                            frm2.Controls.Add(imagebox2);
+                            imagebox2.Dock = DockStyle.Fill;
+                            frm2.Name = "teste";
+                           // frm2.ShowDialog();*/
 
                             Rectangle rec = new Rectangle(xInferior + 4, YInferior - tamanhoNomeY, 462, 30);//629, 180
                             Image<Gray, byte> roi = (new Mat(gray.Clone().Mat, rec)).ToImage<Gray, Byte>();
@@ -118,15 +149,15 @@ namespace AnaliseCNH
                             int num = 3;
                             for (int i = 0; i < num; i++)
                             {
-                                CvInvoke.Line(imgOriginal, yCPF[i].P1, yCPF[i].P2, new Bgr(Color.Red).MCvScalar, 5, LineType.FourConnected);
+                                //   CvInvoke.Line(imgOriginal, yCPF[i].P1, yCPF[i].P2, new Bgr(Color.Red).MCvScalar, 5, LineType.FourConnected);
                                 // CvInvoke.Line(imgOriginal, yCPF2[i].P1, yCPF2[i].P2, new Bgr(Color.Blue).MCvScalar, 3, LineType.FourConnected);
 
                             }
                             int indice1 = 0;
                             int indice2 = indice1++;
-                            for(indice2 = 1; indice2 < yCPF.Count; indice2++)
+                            for (indice2 = 1; indice2 < yCPF.Count; indice2++)
                             {
-                                if(yCPF[indice2].P1.X > yCPF[indice1].P1.X)
+                                if (yCPF[indice2].P1.X > yCPF[indice1].P1.X)
                                 {
                                     break;
                                 }
@@ -140,12 +171,12 @@ namespace AnaliseCNH
                             {
                                 tamanho = 30;
                             }
-                            Rectangle rec2 = new Rectangle(xEsquerdaCpf + 4, (int)(ySuperiorCpf*1.02), tamanho, 30);//629, 180
+                            Rectangle rec2 = new Rectangle(xEsquerdaCpf + 4, (int)(ySuperiorCpf * 1.02), tamanho, 30);//629, 180
 
                             Image<Gray, byte> roi2 = (new Mat(gray.Clone().Mat, rec2)).ToImage<Gray, Byte>();
-                            processedImage = roi2.Mat;
+                            processedImage = grayImage.Mat;// roi2.Mat;
                             string teste = cnhController.LerDocumento(roi2, 1);
-                         ///   teste = mascaraCPF(teste);
+                            ///   teste = mascaraCPF(teste);
                             label2.Text = teste;
 
                             #endregion
@@ -171,7 +202,7 @@ namespace AnaliseCNH
 
             teste = teste.Trim();
             teste = Regex.Replace(teste, @"\s+", "");
-            return String.Format("{0}.{1}.{2}-{3}", teste.Substring(0,3), teste.Substring(4,3), teste.Substring(8,3), teste.Substring(12,2));
+            return String.Format("{0}.{1}.{2}-{3}", teste.Substring(0, 3), teste.Substring(4, 3), teste.Substring(8, 3), teste.Substring(12, 2));
         }
 
         private void ibOriginal_Click(object sender, EventArgs e)

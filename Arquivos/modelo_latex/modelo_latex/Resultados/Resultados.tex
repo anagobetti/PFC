@@ -1,109 +1,84 @@
 \chapter{Resultados}
 
-Para a execução do projeto, algumas etapas de desenvolvimento tiveram de ser seguidas: familiarização com o sistema, estudo dos módulos envolvidos, leitura dos requisitos, elaboração de documento descrevendo todo o processo de implementação e relacionamento com os diversos módulos, implementação e testes.
+Para a execução do projeto, algumas etapas de desenvolvimento tiveram de ser seguidas: familiarização com a biblioteca, estudo dos módulos envolvidos, leitura dos requisitos, elaboração de documento descrevendo todo o processo de implementação e relacionamento com os diversos módulos, implementação e testes. Neste capitulo serão apresentados os resultados de cada operação realizada no processamento  de imagem, que foi detalhado no capitulo anterior. 
 
-\section{Atividades do Projeto}
-\markright{\thesection ~~~ Metodologia}
-\label{metodo3}
+\section{Leitura automática de documentos}
 
-\section {Requisitos do Sistema}
-\markright{\thesection ~~~ Requisitos}
-\label{req}
+\subsection{Calibração automática do sistema}
 
+Como foi descrito no capítulo anterior, converte-se a imagem para o domínio de escala de cinza, é feito um redimensionamento da mesma e esta será a imagem utilizada como base para todo o sistema de leitura automática. 
+Para segmentação da imagem, um dado importante é a análise do histograma da imagem gerada. O histograma é uma função que descreve a frequência com que cada nível de cinza aparece na imagem. Ela é utilizada para ver a distribuição de nível de cinza, permitindo que a imagem seja normalizada, excluindo algumas regiões que não são as regiões de interesse pois estão fora da faixa de cinza desejada, eliminando ruídos e principalmente deixando que o sistema fique menos vulnerável a diferentes configurações de scanners que podem gerar imagens com diferentes ajustes de contraste e brilho. 
 
+Na figura \ref{fig:HistogramaCNHfINAL}, pode ser visto o histograma da imagem original e o histograma da imagem normalizada. 
 
-
-
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[scale=1.2]{Resultados/Figuras/ciclodesenvolvimento.eps}
-\caption{Ciclo de desenvolvimento de um projeto}
-\label{CicloDesenvolvimento}
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=1.00\textwidth]{../../Capitulo4/HistogramaCNHfINAL.png}
+		\caption{a) Histograma da imagem do documento após a conversão para escala de cinza e b) Histograma após a seleção da faixa cinza de interesse}
+	\label{fig:HistogramaCNHfINAL}
 \end{figure}
 
-Para referenciar a Figura \ref{CicloDesenvolvimento}, veja arquivo .tex.
+\clearpage
+
+Como pode ser visto, antes da binarização da imagem existia um pequeno pico no valor próximo ao 90 e uma irregularidade após o 240, porém o grande pico era próximo ao 220, após a normalização do histograma pode-se perceber que os pontos fora da faixa de interesse foram ignorados, reduzindo assim o nível de ruído da imagem.    
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=1.00\textwidth]{../../Capitulo4/CNH_EscaladeCinzaeBin.jpg}
+		\caption{a) Imagem da CNH convertida em escala de cinza, sem tratamento e b) após a seleção da faixa cinza de interesse }
+	\label{fig:CNH_EscaladeCinzaeBin}
+\end{figure}
+
+	
+\subsection{Reconhecimento da face e linhas}
+
+Como foi explicado no capitulo anterior, buscou-se identificar os campos de dados com base na localização das linhas e da face contida na CNH, abaixo segue a figura com as delimitações da linha em azul e a delimitação da face em vermelho. 
+
+Após este tratamento, foi possível identificar as regiões de interesse e cada uma destas imagens delimitadas pelos retângulos vermelhos da figura \ref{fig:imagemLinhas2} passou pelo sistema de leitura de caracteres isoladamente e o resultado foi a obtenção dos dados da CNH, estes dados foram enviados para uma interface que será apresentada na próxima seção.
 
 
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=1.0\textwidth]{../../imagemLinhas2.jpg}
+		\caption{Resultado do processamento após a obtenção das linhas}
+	\label{fig:imagemLinhas2}
+\end{figure}
+\clearpage
 
-Aqui começa uma sub-seção.
+
+Como um todo, o sistema se mostrou bastante eficiente e após pequenas modificações, como delimitação do conjunto de caracteres do leitor para cada campo, o sistema leu corretamente todas as CNHs testadas. Foram utilizadas 5 (cinco) CNHs do modelo antigo e 1 (uma) CNH do novo padrão. Em média o sistema demorou 7 segundos para exibir os dados na tela e este resultado é muito positivo, uma vez que o tempo para uma pessoa interpretar e digitar o documento é muito superior. 
+
+\section{Protótipo da interface}
+
+Com o objetivo de deixar o sistema mais flexível a mudanças e atualizações, ele foi dividido em dois módulos completamente independentes. O primeiro modulo é o de identificação e interpretação dos dados, como foi descrito na seção anterior e o segundo modulo é um protótipo do que seria a interface gráfica de utilização do sistema, para este modelo foi realizada uma interface simples somente para seleção da imagem, apresentação dos dados obtidos e arquivamento do mesmo em formato XML.
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=1.00\textwidth]{../../Capitulo4/Interface.png}
+		\caption{Interface desenvolvida para o protótipo}
+	\label{fig:Interface}
+\end{figure}
 
 
-\section{Desenvolvimeto e Implementação}
+Como foi dito no capitulo anterior, esta interface seria responsável pela seleção da imagem, para este protótipo foram escolhidas duas formas de entrada. A primeira é a seleção manual da imagem, onde o operador do sistema deve navegar até a pasta desejada e escolher a imagem. Além disto, foi implementado no sistema uma função para observar automaticamente uma pasta, que no caso é a pasta de configuração do scanner, esta pasta pode ser alterada nas configurações do sistema e ajuda a tornar o sistema ainda mais rápido, uma vez que a interferência do usuário é menor. Como monitorar uma pasta pode ser uma função não desejada, é possível desabilitar esta opção desmarcando o checkbox na interface. 
 
-Aqui começa outra seção.
+Uma vez obtida a imagem, é solicitado o tratamento e a interface fica esperando o resultado. Quando recebe o mesmo ela é exibida preenchendo o campo da imagem e os respectivos campos de texto contidos na tela. Estes campos são editáveis, para caso seja necessário realizar alguma correção. Após a conferencia dos dados é possível salvar os arquivos em formato XML, em que o nome do arquivo será  formado pelo primeiro nome da pessoa mais o CPF, apertando o botão Salvar no canto inferior direito da tela.
 
-Para inserir a tabela abaixo, veja arquivo .tex.
+%todo Ana
+%%[ARQUIVO XML]
 
-\begin{table}
-\centering
-\begin{tabular}{|l|l|}\hline
-		1.Uso do serviço & Para o assinante rastrear uma chamada, ele deverá tirar\\ 
-										 & o telefone do gancho, esperar pelo tom de discagem e então \\
-										 & discar o código de acesso ao serviço. \\ \hline
-		2.Processamento  & Caso o assinante tenha acesso ao serviço SRUC, ele deverá  \\			
-		  do serviço 		 & ouvir um anúncio, ao discar o código de acesso, explicando \\
-									   & que o serviço SRUC foi acessado. Dessa forma, se os dados \\
-									   & a serem rastreados forem suficientes, o sistema deverá \\
-									   & fornecer uma mensagem de confirmação de \\
-									   & serviço realizado \\ \hline
-		3. Ativação da   		& A ativação do serviço somente será válida \\
-			 última chamada   & para a última chamada recebida. \\ 
-			 recebida				 	& \\ \hline
-		4. Mais de uma   		& Se o assinante tentar ativar o serviço para a mesma chamada \\
-			 ativação para 	 	& ele deverá ouvir novamente o anúncio de serviço realizado, mas \\
-			 a mesma chamada	& não irá gravar os dados novamente \\ \hline
-		5. Número privado 	& O sistema deverá mostrar o número do assinante chamador \\
-			 do assinante A  	& mesmo que este não possa ser mostrado. \\ \hline
-		6. Chamadas  				& Para que o serviço possa valer para chamadas intercentrais \\
-			 intercentrais		& a central deverá utilizar a sinalização SS7, e o número do \\
-												& assinante A será obtido pela mensagem IAM. \\ \hline
-		7. Informações de 	& Um \textit{trace} do serviço deverá possuir os seguintes itens:\\
-			 um registro			& Número do assinante A \\
-												& Hora da chamada recebida\\
-												& Data da chamada recebida\\
-												& Número do assinante B\\
-												& Hora da solicitação do serviço\\
-												& Data da solicitação do serviço\\
-												& Dados sobre rota para chamadas intercentrais \\ \hline
-		8. Tratamento para 	& Se um assinante discar o código de acesso ao \\
-		   assinante sem 		& serviço, a central deverá fornecer tratamento padrão \\
-			 serviço					& de acesso negado. \\ \hline
-		9. Tipos de 				& A central deve permitir que o assinante com o serviço \\
-		   telefones				& possua tanto DTMF quando Dial Pulse \\ \hline
-		10. Comandos do 		& O sistema supervisório conectado à central deverá \\
-		    sistema 				& disponibilizar um  comando para que o operador possa  \\
-		    supervisório		& descarregar o arquivo com os \textit{traces} das chamadas \\
-		    								& para os diversos assinantes de uma central. \\
-												& Um comando para visualizar os \textit{traces} também será necessário. \\ \hline
-		\end{tabular}
-	\caption{Requisitos do Serviço SRUC}
-	\label{tab:RequisitosDoServiçoSRUC}
-\end{table}
+Caso ocorra algum erro no tratamento da imagem, por exemplo, a face não seja identificada, invalidando o documento, o arquivo não seja uma imagem ou a imagem não possua resolução suficiente para o processamento, será exibida um alerta no canto inferior esquerdo.
 
-Aqui você referencia a tabela: a Tabela \ref{tab:RequisitosDoServiçoSRUC} explicita os pontos mais relevantes na implementação do SRUC.
+\section{Leitura de diferentes modelos de CNH}
 
-\section{Testes}
+Como foi explicado na seção 2.1, atualmente existem dois modelos de CNH e embora a posição dos campos obedeçam a mesma ordem, a tonalidade dos dois documentos é muito diferente. Apesar disto, o tratamento inicial, em que é realizado o distribuição de cores para filtrar a imagem se mostrou bastante eficiente, sendo possível identificar corretamente os dados dos dois modelos de CNH, como pode ser visto na figura \ref{fig:InterfaceJoao}. 
 
-\section{Resumo do Capítulo}
-\markright{\thesection ~~~ Metodologia}
-\label{metodo4}
-Esse capítulo pode ser dividido em duas partes $	f=ma $ blaba \cite{bel/00}
- 
-\begin{gather}
-	f=ma\\
-	x=2\\
-\end{gather}
 
-\begin{align}
-	f=ma\\
-	x=2\\
-\end{align}
-
-\begin{eqnarray}
-	f=ma\\
-	x=2\nonumber\\
-\end{eqnarray}
-
+\begin{figure}[ht]
+	\centering
+		\includegraphics[width=1.00\textwidth]{../../Interface Joao.png}
+		\caption{Resultados obtidos para o novo modelo de CNH}
+	\label{fig:InterfaceJoao}
+\end{figure}
 
 \clearpage
