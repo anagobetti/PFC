@@ -19,7 +19,7 @@ A CNH, Carteira Nacional de Habilitação, que também é conhecida como carteira de
 \end{description}
 
   
-A primeira CNH só pode ser retirada nas categorias A ou por meio de cursos teóricos preparatórios, médico e psicotécnico. Após a primeira habilitação existem algumas regras para mudança de categoria (\citet{DetranMG}):
+A primeira CNH só pode ser retirada nas categorias A ou B por meio de cursos teóricos preparatórios, médico e psicotécnico. Após a primeira habilitação existem algumas regras para mudança de categoria (\citet{DetranMG}):
 
 \begin{itemize}
 	\item Categoria A e B: ter mais de 18 anos completos;
@@ -40,7 +40,7 @@ Por servir como documento de habilitação e documento de identificação, este é um
 	\label{fig:NOVACNH}
 \end{figure}
 
-Pela análise da imagem acima, percebe-se que há uma grande alteração de tonalidades no novo modelo, mas os campos continuam seguindo a mesma ordem, desta forma as alterações realizadas não tem muito impacto no desenvolvimento deste trabalho. Além da clara mudança de cor, haverá um mapa do estado, inclusão de dois números de identificação nacional (Registro Nacional e número de espelho da CNH), entre outros dispositivos de segurança. A mudança para o novo modelo é gradual, portanto os motoristas não precisarão trocar o documento atual caso ele ainda seja válido, dessa forma os dois modelos irão coexistir por 5 anos. 
+Apesar de não ser o escopo do trabalho a identificação de falsificações no documento de CNH, é importante observar as diferenças entre os dois documentos, uma vez que dessa forma é possível identificar um algoritmo que atenda aos dois modelos. Pela análise da imagem \cite{fig:NOVACNH}, percebe-se que há uma grande alteração de tonalidades no novo modelo, mas os campos continuam seguindo a mesma ordem, desta forma as alterações realizadas não tem muito impacto no desenvolvimento deste trabalho. Além da clara mudança de cor, haverá um mapa do estado, inclusão de dois números de identificação nacional (Registro Nacional e número de espelho da CNH), entre outros dispositivos de segurança. A mudança para o novo modelo é gradual, portanto os motoristas não precisarão trocar o documento atual caso ele ainda seja válido, dessa forma os dois modelos irão coexistir por 5 anos. 
 
 \section{Imagem Digital}
 
@@ -64,13 +64,14 @@ O valor de cada pixel é obtido pela quantização do sinal analógico (carga elétri
 		\label{fig:TiposImagem}
 	\end{figure}
 
+Na imagem \cite{fig:TiposImagem} pode-se observar um exemplo de cada categoria de imagem, sendo a primeira imagem à esquerda a imagem em escala RGB, que é a imagem colorida, a segunda imagem, ao centro, é a imagem em escala de cinza. Percebe-se que na imagem em escala de cinza a uma variação grande nas intensidade da cor de cinza, o que ainda permite a identificação de detalhes. Já a terceira imagem é a imagem binária, nela só a dois valores possíveis, 0 e 255, percebe-se que nesta imagem não é possível identificar os detalhes da imagem, como divisão entre grama e cerca facilmente. 
 
 \section{Visão Computacional}
 
 
 A visão computacional é um campo que inclui métodos para a aquisição, processamento, análise e compreensão de imagens. A finalidade dessas análises e processamentos é a obtenção de informações numéricas ou simbólicas de imagens, por exemplo, na forma de decisões (\citet{SHAPIRO}). Dessa forma, o objetivo de um sistema de visão computacional é extrair informações úteis a partir de dados de imagem usando modelos construídos com a ajuda da geometria, física, estatística e teoria de aprendizagem. 
 
-O sistema cognitivo do ser humano processa e extrai informações de imagens a todo momento, e utilizar de sistemas computacionais para realizar a mesma atividade é algo extremamente complexo e que exige diversos conhecimentos e abstrações. Para isso a organização de cada sistema depende muito da sua aplicação. No entanto, existem algumas funções típicas que são encontradas em muitos sistemas de visão computacional, normalmente são executadas conforme a figura \ref{fig:ProcessamentoImagem}:
+O sistema cognitivo do ser humano processa e extrai informações de imagens a todo momento, e utilizar sistemas computacionais para realizar a mesma atividade é algo extremamente complexo e que exige diversos conhecimentos e abstrações. Para isso a organização de cada sistema depende muito da sua aplicação. No entanto, existem algumas funções típicas que são encontradas em muitos sistemas de visão computacional, normalmente são executadas conforme a figura \ref{fig:ProcessamentoImagem}:
 
 \clearpage
 

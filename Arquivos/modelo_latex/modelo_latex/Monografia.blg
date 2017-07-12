@@ -9,6 +9,7 @@ A level-1 auxiliary file: Resultados/Resultados.aux
 A level-1 auxiliary file: Conclusao/Conclusao.aux
 The style file: plainnat.bst
 Database file #1: MyCollection.bib
+Warning--I didn't find a database entry for "fig:NOVACNH"
 Warning--to sort, need author or key in EmguSite
 Warning--to sort, need author or key in mitek
 Warning--to sort, need author or key in TrustId
@@ -53,4 +54,4 @@ Warning--empty year in Serasa
 Warning--empty journal in SHAPIRO
 Warning--empty publisher in Shin2013
 Warning--empty publisher in Waters1997
-(There were 44 warnings)
+(There were 45 warnings)
